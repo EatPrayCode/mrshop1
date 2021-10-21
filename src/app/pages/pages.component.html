@@ -1,117 +1,517 @@
-<mat-sidenav-container>
-    <mat-sidenav [opened]="false" mode="over" #sidenav class="sidenav mat-elevation-z6">
-        <button mat-icon-button color="warn" class="close" (click)="sidenav.close()">
-           <mat-icon color="warn">close</mat-icon>
-        </button>
-        <div class="divider"></div>
-
-        <div perfectScrollbar class="vertical-menu-wrapper">
-            <app-vertical-menu [menuParentId]="0"></app-vertical-menu>
-        </div>
-
-        <div class="divider"></div>
-        <app-social-icons [iconSize]="'xlg'" [iconColor]="'primary'" fxLayout="row" fxLayoutAlign="center center"></app-social-icons>
-
-    </mat-sidenav>
-
-    <mat-sidenav-content class="page-wrapper" fxLayout="column" fxLayoutAlign="start stretch">
-
-        <header [ngClass]="'toolbar-'+settings.toolbar" [class.has-bg-image]="settings.headerBgImage" [class.has-bg-video]="settings.headerBgVideo" [class.main-toolbar-fixed]="settings.mainToolbarFixed">
-
-            <app-toolbar1 *ngIf="settings.toolbar == 1" (onMenuIconClick)="sidenav.toggle()"></app-toolbar1>
-            <app-toolbar2 *ngIf="settings.toolbar == 2" (onMenuIconClick)="sidenav.toggle()"></app-toolbar2>
-
-        </header>
-
-        <main [class.content-offset-to-top]="settings.contentOffsetToTop">
-            <router-outlet></router-outlet>
-        </main>
-
-        <div class="sticky-footer-helper" fxFlex="grow"></div>
-
-        <!-- <app-footer></app-footer> -->
-
-        <div fxLayout="row" fxLayoutAlign="center center" class="options-icon" (click)="options.toggle()">
-            <mat-icon>settings</mat-icon>
-        </div>
-
-        <div *ngIf="showBackToTop" fxLayout="row" fxLayoutAlign="center center" class="back-to-top" (click)="scrollToTop()">
-            <mat-icon>arrow_upward</mat-icon>
-        </div>
-
-    </mat-sidenav-content>
-
-    <mat-sidenav #options position="end" class="options" autoFocus="false">
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="op-header mat-elevation-z1">
-            <h2>Settings</h2>
-            <button mat-icon-button (click)="options.toggle()" color="accent">
-                <mat-icon>close</mat-icon>
-            </button>
-        </div>
-        <div perfectScrollbar>
-            <div fxLayout="column" class="control">
-                <h4>Layout</h4>
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <span>Sticky Menu Toolbar</span>
-                    <mat-slide-toggle [checked]="settings.stickyMenuToolbar" (change)="settings.stickyMenuToolbar = !settings.stickyMenuToolbar" labelPosition="before"></mat-slide-toggle>
+<div style="overflow: visible; position: static;" data-new-gr-c-s-check-loaded="14.1034.0" data-gr-ext-installed="">
+    <div id="app">
+        <div class="_3wCa9">
+            <section class="_3995s">
+                <div class="_3zYBn">
+                    <div class="_3QLRN"><i class="clear"></i>
+                        <div class="_1vFpG"><i class="search"></i><input type="text" placeholder="Search Paytm"></div>
+                    </div>
                 </div>
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <span>RTL</span>
-                    <mat-slide-toggle [checked]="settings.rtl" (change)="settings.rtl = !settings.rtl" labelPosition="before"></mat-slide-toggle>
+                <div class="_1E_OP">
+                    <div class="_8oupZ">
+                        <div class="_2yuAj"><a class="_1VCtp"><span>Recharge &amp; Pay Bills</span></a><a class=""><span>Online Shopping</span></a><a class=""><span>Travel</span></a><a class=""><span>Movies &amp; Events</span></a><a class=""><span>Stocks &amp; Wealth</span></a>
+                            <a class=""><span>Loans &amp; Credit Card</span></a><a class=""><span>Other Services</span></a></div>
+                    </div>
+                    <div class="o5jX8">
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710719/1610605805462.png" alt="Mobile Prepaid"></div><span>Mobile Prepaid</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/860999/1627022837978.png" alt="Rent Payment"></div><span>Rent Payment</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710670/1610605839633.png" alt="Electricity"></div><span>Electricity</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710721/1610605705257.png" alt="DTH"></div><span>DTH</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710701/1610607154707.png" alt="Piped Gas Bill"></div><span>Piped Gas Bill</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/796201/1618304152725.png" alt="Book a Cylinder"></div><span>Book a Cylinder</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710699/1610605714319.png" alt="Broadband / Landline"></div><span>Broadband / Landline</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710695/1610607088169.png" alt="LIC Insurance"></div><span>LIC Insurance</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710696/1610605714729.png" alt="Pay Loan"></div><span>Pay Loan</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710705/1610607486769.png" alt="Water"></div><span>Water</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710682/1610607519681.png" alt="Credit Card Payment"></div><span>Credit Card Payment</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710724/1610607549685.png" alt="Metro"></div><span>Metro</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710671/1610607578298.png" alt="Mobile Postpaid"></div><span>Mobile Postpaid</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710707/1610605813788.png" alt="Challan"></div><span>Challan</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710685/1610607739530.png" alt="Municipal Payments"></div><span>Municipal Payments</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710713/1610607868124.png" alt="FASTag"></div><span>FASTag</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710678/1610605713657.png" alt="Cable TV"></div><span>Cable TV</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710684/1610608103600.png" alt="Fee Payment"></div><span>Fee Payment</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710704/1610605832683.png" alt="Apartments"></div><span>Apartments</span>
+                        </a>
+                        <a>
+                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710743/1610608207633.png" alt="Google Play Recharge"></div><span>Google Play Recharge</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <header>
+                <div class="_1rMon">
+                    <div class="_2-CQY">
+                        <div class="_3kZR6"><a>Log In</a></div>
+                    </div><img src="//assetscdn1.paytm.com/commonmweb/cc3bba88.svg" class="_3SrLh" alt="Paytm Logo">
+                    <a class="_14k0l">
+                        <div class="_2PSue"></div><img src="//assetscdn1.paytm.com/commonmweb/dfe055fc.svg" alt="Search">
+                    </a>
+                </div>
+            </header>
+            <section class="_2MTbQ"><img src="//assetscdn1.paytm.com/commonmweb/59341da8.svg" alt="PAY OR TRANSFER MONEY">
+                <section class="_1Ga58">
+                    <h1>PAY OR TRANSFER MONEY<span>Directly From Your Bank Account</span></h1>
+                </section>
+            </section>
+            <section class="_1glzc">
+                <div class="_153qt">
+                    <div class="_210g0">
+                        <a target="_self">
+                            <div class="_1dhwF"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695395/1614061006261.png" alt="Add Money">
+                            <div class="_1kWgX">Add Money</div>
+                        </a><a target="_self"><span>App Only</span>
+              <div class="_1dhwF"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/720846/1616660541224.png" alt="UPI Money Transfer">
+              <div class="_1kWgX">UPI Money Transfer</div>
+            </a>
+                        <a target="_self">
+                            <div class="_1dhwF"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695397/1614061189456.png" alt="Bank">
+                            <div class="_1kWgX">Bank</div>
+                        </a>
+                        <a target="_self">
+                            <div class="_1dhwF"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695398/1616660757899.png" alt="Passbook">
+                            <div class="_1kWgX">Passbook</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div class="qSlSv">
+                <h1>Recharge &amp; Bill Payments</h1>
+                <div class="_3zBy5 _2ziOT">
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695541/1614072119245.png" alt="Mobile Prepaid"></div>
+                        <div class="_2mM_z">Mobile Prepaid</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/720847/1614072256855.png" alt="Electricity"></div>
+                        <div class="_2mM_z">Electricity</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/751600/1614072138712.png" alt="DTH"></div>
+                        <div class="_2mM_z">DTH</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/721889/1611927436408.png" alt="View All"></div>
+                        <div class="_2mM_z">View All</div>
+                    </a>
                 </div>
             </div>
-
-            <div fxLayout="column" class="control">
-                <h4>Choose toolbar type</h4>
-                <mat-radio-group [(ngModel)]="toolbarTypeOption" (change)="chooseToolbarType()">
-                    <mat-radio-button *ngFor="let toolbarType of toolbarTypes" [value]="toolbarType">toolbar-{{toolbarType}}</mat-radio-button>
-                </mat-radio-group>
+            <div class="qSlSv">
+                <h1>Play &amp; Win</h1>
+                <div class="_3zBy5 _2ziOT">
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/886339/1633951609216.png" alt="Create Team"></div>
+                        <div class="_2mM_z">Create Team</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"><span>Win ₹50 L</span></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/886340/1633951939459.png" alt="Play Rummy"></div>
+                        <div class="_2mM_z">Play Rummy</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/886341/1632720618595.png" alt="Jackpot"></div>
+                        <div class="_2mM_z">Jackpot</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/886342/1633951962855.png" alt="Call Break"></div>
+                        <div class="_2mM_z">Call Break</div>
+                    </a>
+                </div>
             </div>
-
-            <div fxLayout="column" class="control">
-                <h4>Choose header type</h4>
-                <mat-radio-group [(ngModel)]="headerTypeOption" (change)="chooseHeaderType()">
-                    <mat-radio-button *ngFor="let headerType of headerTypes" [value]="headerType">{{headerType}}</mat-radio-button>
-                </mat-radio-group>
+            <div class="qSlSv">
+                <h1>Tickets</h1>
+                <div class="_3zBy5">
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695529/1614061224806.png" alt="Movie Tickets"></div>
+                        <div class="_2mM_z">Movie Tickets</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695530/1614074855221.png" alt="Train Tickets"></div>
+                        <div class="_2mM_z">Train Tickets</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"><span>Flat 10%</span></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/775579/1619418307977.png" alt="Flight Tickets"></div>
+                        <div class="_2mM_z">Flight Tickets</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695532/1614074888860.png" alt="Bus Tickets"></div>
+                        <div class="_2mM_z">Bus Tickets</div>
+                    </a>
+                </div>
+                <div class="_3qnF1">
+                    <a class="_29q3U">
+                        <div class="_2PSue"></div>All Services
+                        <!-- --><i></i>
+                    </a>
+                </div>
             </div>
-
-            <div fxLayout="column" class="control">
-                <h4>Choose theme skin</h4>
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <div class="skin-primary blue" (click)="changeTheme('blue')"></div>
-                    <div class="skin-primary green" (click)="changeTheme('green')"></div>
-                    <div class="skin-primary red" (click)="changeTheme('red')"></div>
-                    <div class="skin-primary pink" (click)="changeTheme('pink')"></div>
-                    <div class="skin-primary purple" (click)="changeTheme('purple')"></div>
-                    <div class="skin-primary grey" (click)="changeTheme('grey')"></div>
-                    <div class="skin-primary orange-dark" (click)="changeTheme('orange-dark')">
-                        <div class="skin-secondary"></div>
+            <section class="_33-Uj _2r-dj">
+                <h1>Download Paytm app</h1>
+                <div class="cXQRN">
+                    <a target="_self">
+                        <div class="_2PSue"></div>
+                        <div class="pjtEk"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695726/1617889954881.png" alt="Scan any QR">
+                            <div class="_2ClTh">Scan any QR<span>Make payments at nearby shops</span></div>
+                        </div>
+                    </a>
+                    <a target="_self">
+                        <div class="_2PSue"></div>
+                        <div class="pjtEk"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695727/1617890104236.png" alt="App only offers">
+                            <div class="_2ClTh">App only offers<span>View your personalized offers, scratchcards and points</span></div>
+                        </div>
+                    </a>
+                    <a target="_self">
+                        <div class="_2PSue"></div>
+                        <div class="pjtEk"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695728/1617890317932.png" alt="Safe and Secure">
+                            <div class="_2ClTh">Safe and Secure<span>At Paytm your trust is foremost, your money is yours until you get what you paid for</span></div>
+                        </div>
+                    </a>
+                    <a target="_self">
+                        <div class="_2PSue"></div>
+                        <div class="pjtEk"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695729/1617890352804.png" alt="Faster and Smoother">
+                            <div class="_2ClTh">Faster and Smoother<span>Make the most of the enriched in-app experience</span></div>
+                        </div>
+                    </a><button>
+            <div class="_2PSue"></div>Download the app now
+          </button></div>
+            </section>
+            <section class="_1w7kQ"><img src="https://assetscdn1.paytm.com/images/catalog/view/305388/1613996658023.png" alt="">
+                <div class="_2-z9I">Download the App<span>Live the Paytm Experience</span></div>
+                <a>
+                    <div class="_2PSue"></div>Download Now
+                </a>
+            </section>
+            <div class="qSlSv">
+                <h1>Also on Paytm</h1>
+                <div class="_3zBy5">
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"><span>Upto 80%</span></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/763034/1621940555746.png" alt="Online Shopping"></div>
+                        <div class="_2mM_z">Online Shopping</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/695773/1617108012198.png" alt="Buy Digital Gold"></div>
+                        <div class="_2mM_z">Buy Digital Gold</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/859518/1632720545211.png" alt="Cricket"></div>
+                        <div class="_2mM_z">Cricket</div>
+                    </a>
+                    <a>
+                        <div class="_1dhwF"></div><span class="_3IE-U"></span>
+                        <div class="_3GMyU"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/721582/1611920330762.png" alt="Loans"></div>
+                        <div class="_2mM_z">Loans</div>
+                    </a>
+                </div>
+                <div class="_3qnF1">
+                    <a class="_29q3U">
+                        <div class="_2PSue"></div>All Services
+                        <!-- --><i></i>
+                    </a>
+                </div>
+            </div>
+            <section class="ns3pk">
+                <ul>
+                    <li><img src="https://assetscdn1.paytm.com/images/catalog/view_item/859394/1632285946569.jpg" alt="Rummy 2k bonus thin"></li>
+                    <li><img src="https://assetscdn1.paytm.com/images/catalog/view_item/800899/1621859340855.jpg" alt="Amazing Deals"></li>
+                    <li><img src="https://assetscdn1.paytm.com/images/catalog/view_item/789085/1617707759191.png" alt="Mobile Recharge"></li>
+                </ul>
+            </section>
+            <section class="_33fqW">
+                <h1>Shop on Paytm Mall</h1>
+                <ul>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696253/1615890878943.png" alt="Electronics">
+                        <div class="_3sWLO">Electronics</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696274/1615890777709.png" alt="Grocery &amp; Health">
+                        <div class="_3sWLO">Grocery &amp; Health</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696275/1624004894899.png" alt="Fashion">
+                        <div class="_3sWLO">Fashion</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696271/1615363240492.png" alt="Mobiles &amp; Gadgets">
+                        <div class="_3sWLO">Mobiles &amp; Gadgets</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696251/1611837788196.png" alt="Home">
+                        <div class="_3sWLO">Home</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696268/1615890873562.png" alt="Footwear">
+                        <div class="_3sWLO">Footwear</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696256/1615890801860.png" alt="Mobiles">
+                        <div class="_3sWLO">Mobiles</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696250/1615890895438.png" alt="Storage Devices">
+                        <div class="_3sWLO">Storage Devices</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696257/1615890834548.png" alt="Brand Vouchers">
+                        <div class="_3sWLO">Brand Vouchers</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696272/1615890901477.png" alt="Accessories">
+                        <div class="_3sWLO">Accessories</div>
+                    </li>
+                    <li>
+                        <div class="_2PSue"></div><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696255/1615363035451.png" alt="Top Offers">
+                        <div class="_3sWLO">Top Offers</div>
+                    </li>
+                </ul>
+            </section>
+            <section class="_33-Uj _36Xcr">
+                <div class="cXQRN">
+                    <a target="_self">
+                        <div class="_2PSue"></div>
+                        <div class="pjtEk"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696276/1617107658840.png" alt="Cashback &amp; Offers">
+                            <div class="_2ClTh">Cashback &amp; Offers<span>View your scratchcards, points &amp; other offers</span></div>
+                        </div>
+                    </a>
+                    <a target="_self">
+                        <div class="_2PSue"></div>
+                        <div class="pjtEk"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696278/1617107672641.png" alt="Paytm for Business">
+                            <div class="_2ClTh">Paytm for Business<span>Get All-in-One-QR instantly &amp; start accepting payments</span></div>
+                        </div>
+                    </a>
+                    <a target="_self">
+                        <div class="_2PSue"></div>
+                        <div class="pjtEk"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/696280/1617107969561.png" alt="24x7 Customer care">
+                            <div class="_2ClTh">24x7 Customer care<span>Get quick resolution on queries related to Paytm</span></div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <div class="_3Z_tP">
+                <div class="_3UEVN"></div>
+                <div class="_3t3s- _3Vvh3 _3dxad" style="border-radius:10px 10px 0 0;padding:0;height:auto;width:100%">
+                    <div class="wMR_D _20PrV _2Qn3-"><span class="_3ZKYn"></span></div>
+                    <div class="YQ_6D">
+                        <div class="LBqxR">
+                            <h1>Download Paytm App<span>Get Cashbacks and Other offers across categories</span></h1>
+                            <div class="_2OSbb"><img src="//assetscdn1.paytm.com/commonmweb/cc8e41a3.svg" alt=""><img src="//assetscdn1.paytm.com/commonmweb/3f1bafa5.svg" alt=""></div>
+                        </div>
+                        <div class="hzmAb"><span>Download App Now</span></div><img src="//assetscdn1.paytm.com/commonmweb/cc8a3b10.svg" alt="">
                     </div>
                 </div>
             </div>
-
-            <div fxLayout="column" class="control">
-                <h4>Choose search panel variant</h4>
-                <mat-radio-group [(ngModel)]="searchPanelVariantOption" (change)="chooseSearchPanelVariant()">
-                    <mat-radio-button *ngFor="let searchPanelVariant of searchPanelVariants" [value]="searchPanelVariant">variant-{{searchPanelVariant}}</mat-radio-button>
-                </mat-radio-group>
-                <mat-slide-toggle [checked]="settings.searchOnBtnClick" (change)="settings.searchOnBtnClick = !settings.searchOnBtnClick" labelPosition="after">Search On Button Click</mat-slide-toggle>
+            <div class="DmsB6 _3BWxB"><i class="top"></i>
+                <div style="position:relative;display:inline-block;overflow:hidden"><s style="position:absolute;border-radius:50%;opacity:0;width:35px;height:35px;transform:translate(-50%, -50%);pointer-events:none;background-color:rgba(0, 0, 0, .3)"></s></div>
             </div>
+            <footer class="_63Y5e">
+                <div class="w7b5D"><a><i class="Facebook"></i>
+            <div class="_2PSue"></div>
+          </a><a><i class="Twitter"></i>
+            <div class="_2PSue"></div>
+          </a><a><i class="Instagram"></i>
+            <div class="_2PSue"></div>
+          </a></div>
+                <div class="_3f262">
+                    <div>Copyright
+                        <!-- -->©
+                        <!-- -->2021
+                        <!-- -->Paytm All rights reserved
+                    </div><a target="_self">About Us<div class="_2PSue"></div></a><a target="_self">Partner with us<div class="_2PSue"></div></a><a target="_self">Terms &amp; Conditions<div class="_2PSue"></div></a><a target="_self">Blog<div class="_2PSue"></div></a>
+                    <a target="_self">24x7 Help
+                        <div class="_2PSue"></div>
+                        </a><a target="_self">Grievance policy<div class="_2PSue"></div></a><a target="_self">Bug bounty<div class="_2PSue"></div></a>
+                </div>
+                <div class="W5G8p">
+                    <div class="_3sjUl"><i class="_19BV3"></i></div>
+                    <div>
+                        <h5 style="height:18px; font-size:14px">More about Paytm</h5><br>
+                        <h1><br><b>Paytm - India's Most Popular Platform for Money Transfer, BHIM UPI Payments, Recharges and other online payments</b></h1>
+                        <p>Paytm - India’s largest mobile e-commerce website is an ultimate destination for prompt <a href="https://paytm.com/recharge">Online Recharge</a>, DTH, Data Card &amp; Metro Card Recharge and Mobile Bill Payment for Airtel, Aircel,
+                            BSNL, Idea, MTNL, Vodafone &amp; other operators for all the circles across India. Enjoy our online recharge and bill payment service along with best bonus packs of internet &amp; roaming within a jiffy. <br><br> Now you don’t
+                            have to look at various websites to find the best entertainment option in your city. You can book movie tickets, event tickets and travel tickets within minutes on Paytm.com. Paytm login is very easy on the <a href="http://paytm.com/download-paytm-app">Paytm app</a>                            and Paytm website. Just enter your number and Password/OTP to login and process all the transactions instantly on Paytm. </p>
+                        <h2><b>Mobile Recharge - Airtel, Vodafone, Idea, Jio, BSNL, MTNL, and More</b></h2>
+                        <p>Now making an online recharge has become very easy and safe with your Paytm account on Paytm.com. Effortlessly make payments through our safe methods, processed through secured gateways for <a href="https://paytm.com/recharge/airtel-prepaid-mobile-online-recharge">Airtel Recharge</a>,
+                            <a href="https://paytm.com/recharge/jio-prepaid-mobile-online-recharge">Jio Recharge</a>, <a href="https://paytm.com/recharge/vodafone-idea-prepaid-mobile-online-recharge">Vodafone Idea Recharge</a>, <a href="https://paytm.com/recharge/mtnl-prepaid-mobile-online-recharge">MTNL Recharge</a>,
+                            <a href="https://paytm.com/recharge/bsnl-prepaid-mobile-online-recharge">BSNL Recharge</a>. Paytm also provide you with exciting cashback and offers on Paytm.<br><br> All The Latest Plans And Packs For Your Mobile Recharge-
+                            Paytm makes it very easier for you to make recharge online with Paytm. You can browse all the latest recharge plans and offers right on Paytm itself. More than that, Paytm.com or Paytm app fetches your operator and circle automatically
+                            as soon as you enter your number, making the process faster and easier for you. </p>
+                        <h2><b>Online Tickets - Flight Tickets, Train Tickets, Bus Tickets And Hotels Booking with Great Ease</b></h2>
+                        <p>Save money and time by booking your travel tickets on Paytm. You can find <a href="https://paytm.com/flights">cheap flight tickets</a>, train tickets and bus tickets on Paytm. Compare the prices, get schedules, pick the best-suited
+                            seat and experience easy ticket booking services online. You can also save money on your travel by applying promo codes on flights, buses, trains &amp; <a href="https://paytm.com/hotels">hotels bookings</a> to get cashback
+                            in your Paytm wallet on your travel tickets.<br><br>
+                            <b>Flight Tickets-</b> Make your flight booking online on Paytm to find cheap flight tickets and <a href="https://paytm.com/offer/flight-tickets">flight tickets offers</a>. Just enter your boarding and destination city to know
+                            all the flight tickets prices for both <a href="https://paytm.com/flights/domestic-tickets">domestic flights</a> and <a href="https://paytm.com/flights/international-tickets">international flights</a>.<br><br>
+                            <b>Train Ticket Booking-</b> <a href="https://paytm.com/train-tickets/pnr-status">Check PNR status</a>, find train schedule and get <a href="https://paytm.com/train-tickets/seat-availability">train seat availability</a> for
+                            your online <a href="https://paytm.com/train-tickets">train ticket bookings</a>. Just enter your boarding and destination station or city to know all the train ticket prices. Make instant train reservation through Paytm and
+                            save money with cashback.<br><br>
+                            <b>Bus Tickets-</b> Make fast online <a href="https://paytm.com/bus-tickets">bus ticket booking</a> for both AC and Non-AC buses, private and government buses on Paytm. Find all the buses and timings along with <a href="https://paytm.com/offer/bus-tickets/">bus ticket offers</a>                            for your bus tickets.
+                        </p>
+                        <h3><b>Mobile, DTH and Data Card Recharge &amp; Payment On-The-Go</b></h3>
+                        <p>No need to rush to the market for <a href="https://paytm.com/dth-recharge">DTH Recharge</a> or <a href="https://paytm.com/mobile-bill-payment">Mobile Bill Payment</a>, just login to Paytm and make immediate payments. Cherish your
+                            experience with exciting Cashback and Discounts on every recharge or bill payment you make with us. Our online recharge and bill payment service is a one-stop solution for fast &amp; easy Prepaid Mobiles, DTH &amp; <a href="https://paytm.com/datacard-recharge">Data Card recharge</a>                            and Postpaid Mobiles.<br><br>
+                            <b>DTH Recharge-</b> Make DTH recharge online and get DTH recharge offers on Paytm. <a href="https://paytm.com/dth-recharge/tata-sky">Tata sky recharge</a>, <a href="https://paytm.com/dth-recharge/airtel-digital-tv">Airtel DTH recharge</a>,
+                            <a href="https://paytm.com/dth-recharge/d2h">Videocon D2H recharge</a>, <a href="https://paytm.com/dth-recharge/sun-direct">Sun Direct recharge</a>, <a href="https://paytm.com/dth-recharge/dish-tv">Dish TV recharge</a> and
+                            more on Paytm.com. Find all the latest DTH recharge offers and plans only on Paytm. <br><br>
+                            <b>Data Card Recharge-</b> Get your <a href="https://paytm.com/datacard-recharge/airtel">Airtel Data Card Recharge</a>, <a href="https://paytm.com/datacard-recharge/vodafone-idea">Vodafone Idea Data Card Recharge</a>, <a href="https://paytm.com/datacard-recharge/jio">Jio Data Card Recharge</a>,
+                            <a href="https://paytm.com/datacard-recharge/idea">BSNL Data Card Recharge</a> and <a href="https://paytm.com/datacard-recharge/mtnl">MTNL Data Card Recharge</a> now on Paytm.com and avail cashback by applying promo codes.
+                            <br><br>
+                            <b>Data Card Bill Payment:</b> Pay your data card bills on your postpaid connection of <a href="https://paytm.com/datacard-bill-payment/airtel">Airtel</a>, <a href="https://paytm.com/datacard-bill-payment/idea">Idea</a>,
+                            <a href="https://paytm.com/datacard-bill-payment/vodafone">Vodafone</a>.<br> <br> Visit us and recharge your Prepaid Mobile, DTH and Data Card or Make Postpaid Mobile Bill Payments and other Utility Bill Payments in a click
+                            and indulge into an unbelievable <a href="https://paytmmall.com">online shopping</a> experience.
+                        </p>
+                        <h3><b>Buy FASTag Online And Move Quickly Through the Toll Lanes:</b></h3>
+                        <p>Avoid long queues at the toll lanes and move quickly through them with the help of Paytm <a href="https://paytm.com/fastag">FASTag</a>. It is very easy to buy FASTag for your vehicle at Paytm in just a few minutes. Order Toll-Tag
+                            now or just register for one at Paytm instantly and drive freely with the toll tags.</p>
+                        <h3><b>Online Bill Payment Postpaid Bills, Quick Utility Bill, Insurance, Loan &amp; Education Fee Payment</b></h3>
+                        <p><b>Postpaid Bill Payment-</b> Mobile Post-paid bill payments for all the renowned operators such as <a href="https://paytm.com/mobile-bill-payment/airtel-postpaid">Airtel</a>, <a href="https://paytm.com/mobile-bill-payment/vodafone-idea-postpaid">Vodafone Idea Postpaid</a>,
+                            <a href="https://paytm.com/mobile-bill-payment/jio-postpaid">Jio</a>, <a href="https://paytm.com/mobile-bill-payment/bsnl-postpaid">BSNL</a>, <a href="https://paytm.com/mobile-bill-payment/mtnl-dolphin-postpaid">MTNL</a> are
+                            available on Paytm.com. <br><br> Pay <a href="https://paytm.com/electricity-bill-payment">Electricity Bill</a>, <a href="https://paytm.com/gas-bill-payment">Gas Bill</a> &amp; <a href="https://paytm.com/water-bill-payment">Water Bill</a>                            instantly in just a few clicks Enjoy uncomplicated utility bill online payment service without even travelling to the stores at Paytm. We are no doubt a reliable platform for speedy electricity, gas &amp; water bill payment.<br><br>
+                            <b>Electricity Bill Payment-</b> Pay your electricity bills online on Paytm.com and avoid waiting in the queues for hours with Paytm.com. Pay electricity bills in <a href="https://paytm.com/electricity-bill-payment/goa">Goa Electricity Bill Payment</a>,
+                            <a href="https://paytm.com/electricity-bill-payment/bihar">Bihar Electricity Bill Payment</a>, <a href="https://paytm.com/electricity-bill-payment/haryana">Haryana Electricity Bill Payment</a>, <a href="https://paytm.com/electricity-bill-payment/maharashtra">Maharashtra Electricity Bill Payment</a>,
+                            <a href="https://paytm.com/electricity-bill-payment/punjab">Punjab Electricity Bill Payment</a>, <a href="https://paytm.com/electricity-bill-payment/telangana">Telangana Electricity Bill Payment</a> and many more cities. <br><br>
+                            <b>Gas And Water Bill Payment-</b> Pay your water bills within seconds in of <a href="https://paytm.com/water-bill-payment/delhi-jal-board-djb">Delhi Jal Board</a>, <a href="https://paytm.com/water-bill-payment/indore-municipal-corporation-water">Indore Municipal Corporation</a>,
+                            <a href="https://paytm.com/water-bill-payment/gwalior-municipal-corporation-water">Gwalior Municipal Corporation</a>, <a href="https://paytm.com/water-bill-payment/bhopal-municipal-corporation-water">Bhopal Municipal Corporation</a>,
+                            <a href="https://paytm.com/water-bill-payment/bangalore-water-supply-and-sewerage-board-bwssb">Bangalore Water Supply and Sewage Board</a>, <a href="https://paytm.com/water-bill-payment/surat-municipal-corporation-water">Surat Municipal Corporation</a>,
+                            <a href="https://paytm.com/water-bill-payment/pune-municipal-corporation-water">Pune Municipal Corporation</a>, <a href="https://paytm.com/water-bill-payment/nagpur-municipal-corporation-orange-city-water-nagpur">Nagpur Municipal Corporation</a>,
+                            <a href="https://paytm.com/water-bill-payment/uttarakhand-jal-sansthan">Uttrakhand Jal Sansthan</a> and more.<br><br> Pay gas bills of <a href="https://paytm.com/gas-bill-payment/indraprastha-gas-limited">Indraprastha Gas Limited</a>,
+                            <a href="https://paytm.com/gas-bill-payment/gujarat-gas-limited">Gujarat Gas Limited</a>, <a href="https://paytm.com/gas-bill-payment/adani-gas-limited">Adani Gas Limited</a>, <a href="https://paytm.com/gas-bill-payment/aavantika-gas-ltd">Aavantika Gas Limited</a>,
+                            <a href="https://paytm.com/gas-bill-payment/vadodara-gas-limited-vgl">Vadodara Gas Limited</a>, <a href="https://paytm.com/gas-bill-payment/maharashtra-natural-gas-limited-mngl">Maharashtra Natural Gas Ltd</a> and more. <br><br>
+                            <b>Fee Payment, Metro Card Recharge, Insurance Premium and Gold Loan-</b> Forget those gigantic queues, <a href="https://paytm.com/education">pay admission fee</a> or registration fee for various Institutes, Schools &amp; Colleges
+                            online here and save your time. We ensure to provide you with a seamless and speedy service every time you visit us. Now you can also <a href="https://paytm.com/metro-card-recharge">recharge metro card</a> and instantly
+                            <a href="https://paytm.com/insurance-premium-payment">pay insurance premium</a> &amp; gold loan online with Paytm through the comfort of wherever you are.<br><br>
+                            <b>Landline And Broadband Bill Payment-</b> Pay landline and broadband bills of all the major operators such as <a href="https://paytm.com/landline-bill-payment/airtel">Airtel</a>, <a href="https://paytm.com/landline-bill-payment/bsnl">BSNL</a>,
+                            <a href="https://paytm.com/broadband-bill-payment/hathway-broadband">Hathway</a>, <a href="https://paytm.com/broadband-bill-payment/asianet-broadband">Asianet Broadband</a>, <a href="https://paytm.com/broadband-bill-payment/alliance-broadband">Alliance Broadband</a>,
+                            <a href="https://paytm.com/broadband-bill-payment/tata-tele-broadband">Tata</a> and many more at Paytm.com.
+                        </p>
+                        <h3>Mutual Fund Investments made Simple, Transparent and Accessible with Paytm Money</h3>
+                        <p>Ab Mutual Funds ke liye bhi Paytm Karo. Presenting, Paytm Money - India's Most Sincere Wealth Adviser. You can now begin your <a href="https://www.paytmmoney.com/">mutual fund investment</a> journey on the Paytm Money App with
+                            100% paperless KYC verification. Open your investment account within minutes &amp; start an SIP in mutual funds with just Rs.100 on the very same day. Take an assessment of your appetite for risk with our Free Risk Profile
+                            Assessment. Explore and invest in the <a href="https://www.paytmmoney.com/mutual-funds/best-return-funds">best mutual funds</a> rated by leading research agencies and achieve your personal and financial goals.</p>
+                        <p>At Paytm Money, you can manage your SIPs, request portfolio-related statements and view the latest portfolio updates. Enjoy the <a href="https://www.paytmmoney.com/mutual-funds/benefits/">Mutual Fund benefits</a> of absolutely
+                            secure investments on the Paytm Money platform with convenient payment options like Net Banking, UPI and auto-Pay.</p>
+                        <h3><b>Money Bank Transfer Made Instant &amp; Easy With Paytm</b></h3>
+                        <p>Transferring money directly to the bank from Paytm is instant and free of cost using Paytm app. Yes, any Paytm user can make a <a href="https://paytm.com/offer/bank-transfer/">bank transfer</a> anytime and anywhere in less than
+                            a minute. You can link any bank account using Paytm’s UPI services and no KYC is needed. Moreover, you also get a Cashback of Rs. 50 on your first bank transfer with Paytm. To make money transfer process fast &amp; trouble-free,
+                            you can link your account with Paytm in just a few simple steps. Next, you just have to enter the details of the account holder, precisely IFSC code and account number &amp; you are all set to make a bank transfer at 0% charges</p>
+                        <h3><b>Events, Movies and Endless Entertainment- Live, Laugh, Enjoy with Paytm.com</b></h3>
+                        <p>Relive the moment and revive your daily routine with an amazing experience at an incredible amusement park. Book tickets for theme parks &amp; water parks in seconds at Paytm.com and get ready to make your day an adventurous one.
+                            Enjoy the hottest buzz in the town, do not miss out the latest shows and events of your favourite artists, be it music concert or a carnival, book your tickets online at our portal and catch the beats without any hassle. Our
+                            entertainment section enables you to book tickets online for <a href="https://paytm.com/movies">Movies</a>, <a href="https://paytm.com/events">Events</a>, <a href="https://paytm.com/amusement-parks">Amusement Parks</a> &amp;
+                            Water Parks at the matter of a few clicks and escape from your busy schedule.<br><br>
+                            <b>Movie Ticket Booking-</b> Find movie showtimes, movie theatres to book your movie tickets online and get movie ticket offers only on Paytm.com <br><br> Paytm’s <a href="https://paytm.com/care/ticket">24x7</a> Help is always
+                            at your service to assist you in case of any difficulties.
+                        </p>
+                        <h3><b>Online Shopping- Find Best Deals Online On Groceries, Appliances And Latest Smart Phones at Paytm</b></h3>
+                        <p>Tech Fanatics, if you are eager to buy the best <a href="https://paytmmall.com/mobiles-tablets-clpid-6942">mobile</a> phones then here is an ultimate mobile destination for you. Discover the wide selection of mobiles like VIVO
+                            V15 Pro, Oppo F11 Pro, Samsung Galaxy A50, iPhone X, Redmi Y2, Lenovo K8 Note, VIVO Y55S, Redmi Note 6 Pro so on that offers the perfect combination of performance and exciting features. There is a lot more for you to explore,
+                            check out the exhaustive collection of the latest smartphones at great discounts and Cashbacks on Paytm Mall. Add a brand new vehicle to your collection, enjoy the exclusive online pre-booking service for <a href="https://paytmmall.com/cars-bikes-clpid-836">new cars &amp; bikes</a>                            at Paytm. Be the first one to bring home the newly launched automobile, forget sweating for owning the latest car &amp; bike in the town. With Paytm, you can make pre-booking online for cars &amp; bikes in seconds along with
+                            exclusive offers that are especially for you. <br><br> Cashback would be added as Paytm Cash, which is One97 Communications Ltd. loyalty program. It can be used to pay for goods &amp; services sold by merchants that accept
+                            ‘Pay with Paytm’.<br><br> Grab jaw-dropping <a href="https://paytm.com/coupons">Paytm Coupons</a>, Deals, Discounts &amp; Cashback Offers while shopping, who wouldn’t love to shop at discounted prices Paytm presents several
+                            <a href="https://paytm.com/offer/">offers</a> across a huge range of products under our stimulating stores. Shop more &amp; save even more at Sunday Bazaar, Bargain Bazaar and Under 199 stores. Double the joy of weekend shopping,
+                            avail electrifying offers at our Sunday Bazaar, this is surely going to make your Sunday more amazing Buy your favourites at the lowest price possible with tons of discounts at Under 199 Store and shop more with smartness from
+                            our irresistible Bargain Bazaar.</p>
+                        <h4><b>Investments made Simple, Transparent and Accessible with Paytm Money</b></h4>
 
+                        <p><b>Presenting Paytm Money</b> - India's Most Sincere Wealth Adviser. You can now begin your
+                            <a href="https://www.paytmmoney.com/">Investment</a> journey on the Paytm Money App with 100% paperless KYC verification. Open your investment account within minutes &amp; start investing. Take an assessment of your appetite
+                            for risk with our Free Risk Profile Assessment.
+                        </p>
+
+                        <p><a href="https://www.paytmmoney.com/mutual-funds">Mutual Funds</a> - Our first offering to enable users to invest in direct mutual funds. In this, you get to save on commissions &amp; earn up to 1% higher returns than regular funds.
+                            Easy SIP management and a fully digital KYC process would make your investing experience more rewarding.</p>
+
+                        <p><a href="https://www.paytmmoney.com/nps-national-pension-scheme">National Pension System (NPS)</a> - This latest addition to our tax-saving product basket helps you to earn market-linked returns and accumulate a higher corpus for
+                            a comfortable retirement. Additionally, you get to claim an extra tax deduction of up to Rs 50,000 over and above Section 80C benefit of Rs 1,50,000 and save Rs 62,400 in taxes annually.</p>
+
+                        <p><a href="https://www.paytmmoney.com/stocks">Stocks</a> - Stocks are now live on Paytm Money. With a 100% paperless account opening and a fully digital KYC process, you can become investment-ready within 24 hours. Moreover, you
+                            can enjoy both intraday trading in stocks &amp; Zero Brokerage on delivery trading for life! Also, you can set price alerts &amp; create multiple watchlists to track real-time price changes of up to 50 stocks.</p>
+                        <h4><b>Frequently Asked Questions</b></h4>
+                        <p><b>What is Paytm?</b><br>Paytm stands for Pay through mobile and it is India’s largest mobile payments and commerce platform. It lets you transfer money instantly to anyone at zero cost using the Paytm Wallet. You can make cashless
+                            transactions at several places like taxi and autos, petrol pumps, grocery shops, restaurants, coffee shops, multiplexes, and many more. You can also use Paytm to pay for online recharges, utility bill payments, book movie or
+                            travel tickets among other things on the Paytm app or website.<br><br>
+                            <b>How to create Paytm account?</b><br>1. Open your Paytm app<br>2. Tap on ‘Create A New Account’ <br>3. Enter your mobile that you want to use for Paytm, email address and a password<br>4. Tap on ‘Create a New Account’ <br>5.
+                            Enter the OTP that you will receive on your mobile number and click on ‘Submit’ <br>6. Enter your First Name, Last Name and DOB<br>7. Click on ‘Create Account’<br>8. Your account has been created<br><br>
+                            <b>How to use Paytm?</b><br>You can use Paytm for many different things such as online recharge, shopping, pay fees, bills and a lot more thing. You will need to at least one of your bank account to your Paytm account and then
+                            you can enjoy India’s fastest online transactions and payment service. <br><br>
+                            <b>How to transfer money back from Paytm to bank account?</b><br>Follow the steps to transfer money from Paytm wallet to a bank account-<br> 1. Open your ‘Passbook in your Paytm app<br>2. Click on ‘Send Money to Bank’<br>3.
+                            Enter the transaction amount and account details<br>4. Click on ‘Proceed’<br>5. Your transaction is complete. <br><br> Note that Paytm charges you 4% of the transaction when you transfer money from your Paytm wallet to a bank
+                            account. <br><br>
+                            <b>How to do KYC in Paytm?</b><br>To do your KYC in Paytm, you need to log in to your account on Paytm app and follow these steps-<br>1. Go to your ‘My Profile Settings’ section in Paytm app.<br> 2. Tap on ‘Complete your KYC’
+                            <br>3. Select your state and district<br>4. You will see a list of KYC centres as per the details you have filled. Go to the nearby KYC store to complete your KYC. You will have to carry the required documents such as Aadhar
+                            card, Voter ID card, PAN card etc. <br><br>
+                            <b>How to get free Paytm cash back?</b><br>You can get free Paytm cash back by applying promo codes while you are proceeding your transactions. Tap on ‘Cashback’ on the top right corner of your Paytm app to find daily promo
+                            codes and offers. You can get additional cash back by purchasing a gift voucher on Paytm. <br><br>
+                            <b>How to add beneficiary in Paytm?</b><br>1. Go to ‘My Payment Settings’ on Paytm app. <br>2. Tap on ‘Manage Beneficiaries’<br>3. Tap on ‘Add New Beneficiary’<br>4. Enter account details or wallet number of the beneficiary.
+                            <br>5. Tap on ‘Add Beneficiary’ <br>6. Enter OTP received on your number<br>7. Beneficiary is added succesfully<br><br>
+                            <b>How to add money in Paytm wallet?</b><br>To add money in your Paytm wallet follow these simple steps-<br>1. Go to your ‘Passbook’<br>2. Tap on ‘Paytm Wallet’<br>3. Tap on ‘Add money to Paytm Wallet’<br>4. Enter the amount
+                            you want to add in your wallet and click on ‘Add Money’<br>5. Select your mode of the transaction- bank account, debit card, credit card, net banking or BHIM UPI<br>6. Enter account/card details and tap on ‘Pay Securely’<br>7.
+                            Enter OTP that you will receive on your mobile number<br>8. Money is added in your wallet<br><br>
+                            <b>How to pay through Paytm?</b><br>1. Tap on ‘Pay’ on Paytm app<br>2. Scan the QR code or enter the number of the beneficiary that you want to pay<br>3. Enter the amount<br>4. Pay using your Paytm wallet or add money to your
+                            Paytm wallet from your bank account if the wallet has insufficient funds<br>5. The money is paid to the beneficiary<br><br>
+                            <b>How to use Paytm in Hindi?</b><br>1. Download Paytm App from here<br>2. Tap on the top left corner button on your Paytm app<br>3. Tap on ‘Choose Language’<br>4. Select ‘Hindi’ as the language and tap on ‘Continue’ <br>5.
+                            You can use your Paytm app in Hindi now<br><br>
+                            <b> How to contact Paytm customer care executive? </b><br>You can get in touch with the customer care executive by calling at one of the following Paytm customer care numbers-<br>1. Bank, Wallet and Payments- 0120-4456-456<br>2.
+                            Movies and Events Tickets- 0120-4728-728<br>3. Paytm Mall Shopping Orders- 0120-4606060<br>4. Paytm Travel Tickets and Forex- 0120-4880-880<br><br>
+                            <b>How to pay electricity bill by Paytm?</b><br>1. Go to electricity bill payment page on Paytm website or Paytm app<br>2. Select your state<br>3. Select your board<br>4. Enter your consumer number<br>5. Pay your bill through
+                            debit card, credit card, net banking or Paytm wallet<br><br>
+                            <b>How to reset Paytm password?</b><br>1. Tap on ‘My Security Settings’ on your Paytm app<br>2. Select ‘Change Password’<br>3. Enter your current password<br>4. Enter a new password and retype your new password in the box below
+                            Tap on ‘Save’<br>5. Your password has been changed
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            <div></div>
         </div>
-    </mat-sidenav>
-
-</mat-sidenav-container>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-    <div class="container-fluid">
-        <!-- <a [routerLink]="['checkout']" class="navbar-brand">
-            <img src="./../../assets/images/logos/logo.svg" height="28" alt="CoolBrand">
-        </a> -->
-        <a [routerLink]="['properties']"><i class="fa fa-fw fa-search"></i> Store</a>
-        <a [routerLink]="['organiser']"><i class="fa fa-fw fa-envelope"></i> Organiser</a>
-        <a [routerLink]="['checkout']"><i class="fa fa-fw fa-user"></i> Invesments</a>
-        <a [routerLink]="['checkout']"><i class="fa fa-fw fa-search"></i> </a>
-
     </div>
-</nav>
+</div>
