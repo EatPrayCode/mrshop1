@@ -12,6 +12,8 @@ export const routes: Routes = [
             //{ path: '', redirectTo: '/landing', pathMatch: 'full' },
             { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
             { path: 'organiser', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
+            { path: 'payment-packs', loadChildren: () => import('./pages/payment-packs/payment-packs.module').then(m => m.PaymentPacksModule) },
+            { path: 'investment-packs', loadChildren: () => import('./pages/investment-packs/investment-packs.module').then(m => m.InvestmentPacksModule) },
       
             { path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
             { path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) },
