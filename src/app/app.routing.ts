@@ -11,6 +11,8 @@ export const routes: Routes = [
         component: PagesComponent, children: [
             //{ path: '', redirectTo: '/landing', pathMatch: 'full' },
             { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+            { path: 'organiser', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
+      
             { path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
             { path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) },
             { path: 'properties', loadChildren: () => import('./pages/properties/properties.module').then(m => m.PropertiesModule) },

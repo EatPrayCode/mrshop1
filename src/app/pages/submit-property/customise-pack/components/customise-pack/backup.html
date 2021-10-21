@@ -1,0 +1,98 @@
+<div [formGroupName]="i" class="table-container flex-row">
+    <table style="width: 100%">
+      <tr>
+        <td>
+          Pack Name:
+          <input placeholder="Name" formControlName="name" />
+        </td>
+        <td colspan="2">
+          <input type="checkbox" (change)="changeCheckbox($event, i)" formControlName="isChecked" />
+          Item Description
+        </td>
+      </tr>
+
+      <tr>
+        <td class="td-border-bottom">
+          <mat-form-field class="language-field">
+            <mat-select (ngModelChange)="changeBrand($event, i)" formControlName="brand" placeholder="Brand">
+              <mat-option *ngFor="
+                  let brand of (form.controls.items?.value)[i].brandsList
+                " [value]="brand">
+                {{ brand.value }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+
+        <td class="td-border-bottom">
+          <mat-form-field class="language-field">
+            <mat-select (ngModelChange)="changeVariant($event, i)" formControlName="variant"
+              placeholder="Variant">
+              <mat-option *ngFor="
+                  let variant of (form.controls.items?.value)[i].brand
+                    ?.variantsList
+                " [value]="variant">
+                {{ variant.value }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+
+        <td class="td-border-bottom">
+          <mat-form-field class="language-field">
+            <mat-select (ngModelChange)="doSomething($event)" placeholder="Budget">
+              <mat-option *ngFor="let language of languages" [value]="language">
+                {{ language.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td class="td-border-bottom">
+          <mat-form-field class="language-field">
+            <mat-select (ngModelChange)="changeQuantity($event, i)" formControlName="quantity"
+              placeholder="Quantity">
+              <mat-option *ngFor="
+                  let quantity of (form.controls.items?.value)[i]
+                    .quantityList
+                " [value]="quantity">
+                {{ quantity.value }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+
+        <td class="td-border-bottom">
+          Price Per Item
+          <input formControlName="pricePerItem" />
+        </td>
+
+        <td class="td-border-bottom">
+          Total Price Per Item
+          <input formControlName="totalPricePerItem" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" (change)="toggleBrandless($event, i)" formControlName="isBrandless" />
+          Brandless
+        </td>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Choose Days</mat-label>
+            <input matInput [matDatepicker]="picker" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </td>
+        <td>
+          <button type="button" class="btn btn-outline-dark">
+            <i class="fa fa-trash"></i>
+            Remove
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  

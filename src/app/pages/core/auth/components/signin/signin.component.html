@@ -1,0 +1,56 @@
+<div class="p-3">
+  <div class="theme-container">
+
+    <div fxLayout="row" fxLayoutAlign="center center" class="my-3">
+
+      <div [style.max-width.px]="500">
+        <div fxLayout="column" fxLayoutAlign="center center" class="text-center">
+          <h1 class="uppercase">Mrshop</h1>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmit(loginForm.value)">
+          <mat-form-field appearance="outline" class="w-100 mt-2">
+            <mat-icon matPrefix class="mr-1 text-muted">person</mat-icon>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email" formControlName="email" required>
+            <mat-error *ngIf="loginForm.controls.email.errors?.required">email is required</mat-error>
+            <mat-error *ngIf="loginForm.controls.email.hasError('minlength')">email isn't long enough, minimum of
+              6 characters</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="w-100 mt-1">
+            <mat-icon matPrefix class="mr-1 text-muted">lock</mat-icon>
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" formControlName="password" required
+              [type]="hide ? 'password' : 'text'">
+            <mat-error *ngIf="loginForm.controls.password.errors?.required">Password is required</mat-error>
+            <mat-error *ngIf="loginForm.controls.password.hasError('minlength')">Password isn't long enough, minimum of
+              6 characters</mat-error>
+            <button mat-icon-button matSuffix (click)="hide = !hide" type="button" class="text-muted">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <div class="text-center mt-2">
+            <button mat-raised-button color="primary" class="uppercase signin-button font-resize" type="submit">
+              Sign to My Account
+            </button>
+          </div>
+
+          <div class="flex-row-center">
+            <button mat-button>
+              <mat-icon class="text-muted">vpn_key</mat-icon>
+              <span class="mx-1">Reset Password</span>
+            </button>
+          </div>
+
+          <div class="text-center mt-2">
+            <button mat-raised-button color="accent" class="uppercase signin-button font-resize"
+              (click)="signInAnonymously()" type="submit">
+              Continue as Guest
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>

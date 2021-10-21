@@ -1,0 +1,8 @@
+<mat-nav-list>
+    <a mat-list-item *ngFor="let message of complexLinks">
+        <span class="list-item__emoji">
+            {{message.imageUrl}}
+        </span>
+        <span>{{ message?.displayName }} </span>
+    </a>
+</mat-nav-list>

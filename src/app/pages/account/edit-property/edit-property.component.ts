@@ -197,22 +197,22 @@ export class EditPropertyComponent implements OnInit {
     }
   }
   private placesAutocomplete(){ 
-    this.mapsAPILoader.load().then(() => {
-      let autocomplete = new google.maps.places.Autocomplete(this.addressAutocomplete.nativeElement, {
-        types: ["address"]
-      });
-      autocomplete.addListener("place_changed", () => {
-        this.ngZone.run(() => { 
-          let place: google.maps.places.PlaceResult = autocomplete.getPlace(); 
-          if (place.geometry === undefined || place.geometry === null) {
-            return;
-          };
-          this.lat = place.geometry.location.lat();
-          this.lng = place.geometry.location.lng(); 
-          this.getAddress();
-        });
-      });
-    });
+    // this.mapsAPILoader.load().then(() => {
+    //   let autocomplete = new google.maps.places.Autocomplete(this.addressAutocomplete.nativeElement, {
+    //     types: ["address"]
+    //   });
+    //   autocomplete.addListener("place_changed", () => {
+    //     this.ngZone.run(() => { 
+    //       let place: google.maps.places.PlaceResult = autocomplete.getPlace(); 
+    //       if (place.geometry === undefined || place.geometry === null) {
+    //         return;
+    //       };
+    //       this.lat = place.geometry.location.lat();
+    //       this.lng = place.geometry.location.lng(); 
+    //       this.getAddress();
+    //     });
+    //   });
+    // });
   } 
   
    

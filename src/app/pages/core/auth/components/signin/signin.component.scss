@@ -1,0 +1,38 @@
+.auth {
+    white-space: nowrap;
+    padding: 7px 14px;
+    font-weight: 500;
+}
+.signup-message {
+    padding: 10px 16px;
+    line-height: 20px;
+    white-space: break-spaces;
+}
+.alignment-fix {
+    white-space: break-spaces;
+    text-align: center;
+}
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.signin-button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.font-resize {
+    // font-size: inherit;
+    //here for name
+}
+@media screen and (max-width: 441px) {
+    .font-resize {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 541px) and (min-width: 411px) {
+    .font-resize {
+        font-size: 12px;
+    }
+}

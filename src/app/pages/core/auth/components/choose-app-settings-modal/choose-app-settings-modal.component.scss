@@ -1,0 +1,42 @@
+.container {
+    padding: 10px;
+  }
+  
+  .grid-item {
+    background-color: lightsalmon;
+    border-radius: 5px;
+    // padding: 10px;
+    min-width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+  
+  mat-card:hover .selection {
+    opacity: 1;
+  }
+  mat-card.mat-elevation-z4 .selection {
+    opacity: 1;
+  }
+  .card-selected {
+    border: 2px solid #283593;
+  }
+  
+  .selection {
+    opacity: 0;
+    cursor: pointer;
+    color: #283593;
+    background: #fff;
+    position: absolute;
+    right:-10px;
+    top:-10px;
+    border-radius: 100%;
+    height: 24px;
+    width: 24px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.afterpay.com/images/flags/AU.svg');
+    background-size: cover;
+    
+  }
+  

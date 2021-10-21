@@ -1,3 +1,4 @@
+import { CustomisePackModule } from './customise-pack/customise-pack.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -17,7 +18,8 @@ export const routes = [
     RouterModule.forChild(routes),
     SharedModule,
     AgmCoreModule, 
-    InputFileModule
+    InputFileModule,
+    CustomisePackModule
   ]
 })
 export class SubmitPropertyModule { }

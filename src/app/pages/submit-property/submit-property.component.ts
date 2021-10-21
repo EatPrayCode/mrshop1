@@ -1,3 +1,4 @@
+import { mockMonthlyHomeEssentialsProduct2 } from './../../mock-data/mockJsonPacks';
 /// <reference types="@types/googlemaps" />
 import { Component, OnInit, ViewChild, ElementRef, NgZone } from '@angular/core';
 import { MatStepper } from '@angular/material/stepper';
@@ -23,6 +24,7 @@ export class SubmitPropertyComponent implements OnInit {
   public lat: number = 40.678178;
   public lng: number = -73.944158;
   public zoom: number = 12;  
+  inputData: any = mockMonthlyHomeEssentialsProduct2;
 
   constructor(public appService:AppService, 
               private fb: FormBuilder, 
@@ -128,22 +130,22 @@ export class SubmitPropertyComponent implements OnInit {
     }
   }
   private placesAutocomplete(){  
-    this.mapsAPILoader.load().then(() => { 
-      let autocomplete = new google.maps.places.Autocomplete(this.addressAutocomplete.nativeElement, {
-        types: ["address"]
-      });  
-      autocomplete.addListener("place_changed", () => { 
-        this.ngZone.run(() => { 
-          let place: google.maps.places.PlaceResult = autocomplete.getPlace(); 
-          if (place.geometry === undefined || place.geometry === null) {
-            return;
-          };
-          this.lat = place.geometry.location.lat();
-          this.lng = place.geometry.location.lng(); 
-          this.getAddress();
-        });
-      });
-    });
+    // this.mapsAPILoader.load().then(() => { 
+    //   let autocomplete = new google.maps.places.Autocomplete(this.addressAutocomplete.nativeElement, {
+    //     types: ["address"]
+    //   });  
+    //   autocomplete.addListener("place_changed", () => { 
+    //     this.ngZone.run(() => { 
+    //       let place: google.maps.places.PlaceResult = autocomplete.getPlace(); 
+    //       if (place.geometry === undefined || place.geometry === null) {
+    //         return;
+    //       };
+    //       this.lat = place.geometry.location.lat();
+    //       this.lng = place.geometry.location.lng(); 
+    //       this.getAddress();
+    //     });
+    //   });
+    // });
   } 
   
   // public getAddress(){    

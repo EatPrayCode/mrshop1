@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-4 side-container">
+
+        <ul class="list-group list-group-flush">
+            <li *ngFor="let item of rightList" class="list-group-item">
+                <span class="badge bg-success rounded-pill">1/14</span> CName
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-8 main-container">
+        <app-organiser-list (addTaskToListEvt)="handleAddTaskToList($event)"></app-organiser-list>
+    </div>
+</div>
