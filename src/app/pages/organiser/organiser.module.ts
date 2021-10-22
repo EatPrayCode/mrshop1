@@ -1,31 +1,28 @@
-import { OrganiserComponent } from './components/organiser/organiser.component';
+import { PaymentPacksComponent } from './components/payment-packs/payment-packs.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';  
 import { SharedModule } from '../../shared/shared.module';
-import { OrganiserRoutingModule } from './organiser-routing.module';
-import { LeftMenuComponent } from './components/left-menu/left-menu.component';
-import { OrganiserListComponent } from './components/organiser-list/organiser-list.component';
-import { ChoosOrganiserCategoriesComponent } from './components/choose-organiser-categories/choose-organiser-categories.component';
-import { SidenavService } from '../services/sidenav.service';
+
+export const routes = [
+  { path: '', component: PaymentPacksComponent, pathMatch: 'full' },
+  { path: ':id', component: PaymentPacksComponent }
+];
 
 @NgModule({
   declarations: [
-    OrganiserComponent,
-    LeftMenuComponent,
-    OrganiserListComponent,
-    ChoosOrganiserCategoriesComponent
+    PaymentPacksComponent, 
+    PaymentPacksComponent
+  ],
+  exports: [
+    PaymentPacksComponent, 
   ],
   imports: [
     CommonModule,
-    OrganiserRoutingModule,
-    SharedModule,
-  ],
-  exports: [
-    OrganiserComponent,
-    LeftMenuComponent,
-    OrganiserListComponent,
-    ChoosOrganiserCategoriesComponent
-  ],
-  providers: [ SidenavService ],
+    RouterModule.forChild(routes),
+    AgmCoreModule,
+    SharedModule
+  ]
 })
 export class OrganiserModule { }

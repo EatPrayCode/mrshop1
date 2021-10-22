@@ -16,6 +16,9 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./properties.component.scss']
 })
 export class PropertiesComponent implements OnInit {
+
+  rightList: any = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},];
+
   @ViewChild('sidenav') sidenav: any;
   public sidenavOpen:boolean = true;
   @ViewChild(MatPaginator) paginator: MatPaginator;
