@@ -1,28 +1,48 @@
-<!-- *ngFor="let product of appService.Data.cartList" -->
-<div style="overflow: visible; position: static;" data-new-gr-c-s-check-loaded="14.1034.0" data-gr-ext-installed="">
-    <div id="app">
-        <div class="_3wCa9">
-            <section class="_3995s">
-                <div class="_3zYBn">
-                    <div class="_3QLRN"><i class="clear"></i>
-                        <div class="_1vFpG"><i class="search"></i><input type="text" placeholder="Search Paytm"></div>
-                    </div>
+<div class="layout-container">
+    <section class="toolbar-container">
+        <div class="tool-bar-row">
+            <div class="search-row">
+                <i class="clear"></i>
+                <div class="search-container">
+                    <i class="search"></i>
+                    <input type="text" placeholder="Search Paytm">
                 </div>
-                <div class="_1E_OP">
-                    <div class="_8oupZ">
-                        <div class="_2yuAj"><a class="_1VCtp"><span>Recharge &amp; Pay Bills</span></a><a class=""><span>Online Shopping</span></a><a class=""><span>Travel</span></a><a class=""><span>Movies &amp; Events</span></a><a class=""><span>Stocks &amp; Wealth</span></a>
-                            <a class=""><span>Loans &amp; Credit Card</span></a><a class=""><span>Other Services</span></a></div>
-                    </div>
-                    <div class="o5jX8">
-                        <a *ngFor="let product of rightList">
-                            <div class="_3yeWX"><img src="https://assetscdn1.paytm.com/images/catalog/view_item/710719/1610605805462.png" alt="Mobile Prepaid"></div><span>Mobile Prepaid</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <div>
-
             </div>
         </div>
-    </div>
+        <div class="content-layout-container">
+            <div class="left-layout-container">
+                <div class="left-nav-list">
+                    <a class="left-layout-nav-item">
+                        <span>Recharge &amp; Pay Bills</span>
+                    </a>
+                    <a class="">
+                        <span>Online Shopping</span>
+                    </a>
+                    <a class="">
+                        <span>Travel</span>
+                    </a>
+                    <a class="">
+                        <span>Movies &amp; Events</span>
+                    </a>
+                    <a class="">
+                        <span>Stocks &amp; Wealth</span>
+                    </a>
+                    <a class="">
+                        <span>Loans &amp; Credit Card</span>
+                    </a>
+                    <a class="">
+                        <span>Other Services</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right-layout-container">
+                <a *ngFor="let product of rightList">
+                    <div class="img-container">
+                        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/710719/1610605805462.png" alt="Mobile Prepaid">
+                    </div>
+                    <span>Mobile Prepaid</span>
+                </a>
+            </div>
+        </div>
+    </section>
 </div>
