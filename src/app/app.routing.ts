@@ -9,7 +9,7 @@ import { BlankComponent } from './layouts/blank/blank.component';
 export const routes: Routes = [
     {
         path: '',
-        component: BlankComponent,
+        component: PagesComponent,
         // component: KitchensinkComponent,
         children: [
             { path: '', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
@@ -31,7 +31,7 @@ export const routes: Routes = [
             { path: 'account', loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule) },
             { path: 'submit-property', loadChildren: () => import('./pages/submit-property/submit-property.module').then(m => m.SubmitPropertyModule) }
         ]
-      },
+    },
     { path: 'landing', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
     { path: 'lock-screen', component: LockScreenComponent },
     { path: '**', component: NotFoundComponent }
