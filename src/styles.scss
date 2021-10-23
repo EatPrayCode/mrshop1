@@ -26,7 +26,6 @@
 
 .layout-inner-container,
 .layout-inner-container .tool-bar-row {
-    background: #fff;
     top: 0;
     right: 0;
     bottom: 0;
@@ -49,7 +48,6 @@
 .layout-inner-container .tool-bar-row .search-row i {
     padding: 5px 5px 5px 5px;
     font-size: 25px;
-    color: #506d85;
     font-weight: 300;
 }
 
@@ -61,7 +59,6 @@
 
 .layout-inner-container .tool-bar-row .search-row .search-container i {
     font-size: 15px;
-    color: #506d85;
     font-weight: 300;
     position: absolute;
     top: 2px;
@@ -70,14 +67,13 @@
 
 .layout-inner-container .tool-bar-row .search-row .search-container input {
     border: 0;
-    background: #f5f8fa;
     border-radius: 50px;
     padding: 0 15px 0 35px;
     width: 100%;
     height: 40px;
     font-size: 16px;
-    color: #506d85;
     font-weight: 500;
+    background: none;
 }
 
 .layout-inner-container .content-layout-container {
@@ -86,7 +82,6 @@
 
 .layout-inner-container .content-layout-container .left-layout-container {
     width: 30%;
-    background: #f5f8fa;
     overflow: scroll;
     height: 84vh;
     position: relative;
@@ -95,9 +90,8 @@
 .layout-inner-container .content-layout-container .left-layout-container .left-nav-list a {
     display: block;
     padding: 6px 0;
-    border-bottom: 1px solid #e8edf3;
+    border-bottom: 1px solid;
     font-size: 12px;
-    color: #37445a;
     font-weight: 500;
     text-align: center;
 }
@@ -108,7 +102,6 @@
 }
 
 .layout-inner-container .content-layout-container .left-layout-container .left-nav-list .left-layout-nav-item {
-    background: #fff;
     font-weight: 700;
 }
 
@@ -153,6 +146,5 @@
     text-align: center;
     width: 70px;
     font-size: 12px;
-    color: #000;
     font-weight: 600;
 }

@@ -206,7 +206,6 @@ $screen-md-max: ($screen-lg-min - 1);
 }
 
 .c-card {
-    background-color: #FFF;
     align-items: stretch;
     margin: 5px;
     padding: 10px 10px 10px 10px;
@@ -221,9 +220,7 @@ $screen-md-max: ($screen-lg-min - 1);
         }
     }
     .c-card__image-holder {
-        @media screen and (min-width: $screen-sm-min) {
-            background-color: #F2F5F8;
-        }
+        @media screen and (min-width: $screen-sm-min) {}
     }
     .c-card__image {
         width: 50px;
@@ -323,7 +320,6 @@ $screen-md-max: ($screen-lg-min - 1);
         }
         @media screen and (min-width: $screen-sm-min) {
             align-items: center;
-            background-color: #F2F5F8;
             padding: 20px;
         }
     }
