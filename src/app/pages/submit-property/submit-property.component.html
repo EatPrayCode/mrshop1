@@ -95,78 +95,6 @@
                     </div>
                 </mat-step>
 
-                <mat-step label="Additional">
-                    <div class="step-content">
-
-                        <form formGroupName="additional" fxLayout="row wrap">
-
-                            <div fxFlex="100" class="p-3">
-                                <h1 class="fw-500 text-center">Additional</h1>
-                            </div>
-
-                            <div fxFlex="100" fxFlex.gt-xs="33.3" class="px-2">
-                                <mat-form-field appearance="outline" class="w-100">
-                                    <mat-label>Bedrooms</mat-label>
-                                    <input matInput placeholder="bedrooms" autocomplete="off" formControlName="bedrooms" onlyNumber maxlength="2">
-                                </mat-form-field>
-                            </div>
-
-                            <div fxFlex="100" fxFlex.gt-xs="33.3" class="px-2">
-                                <mat-form-field appearance="outline" class="w-100">
-                                    <mat-label>Bathrooms</mat-label>
-                                    <input matInput placeholder="bathrooms" autocomplete="off" formControlName="bathrooms" onlyNumber maxlength="2">
-                                </mat-form-field>
-                            </div>
-
-                            <div fxFlex="100" fxFlex.gt-xs="33.3" class="px-2">
-                                <mat-form-field appearance="outline" class="w-100">
-                                    <mat-label>Garages</mat-label>
-                                    <input matInput placeholder="Garages" autocomplete="off" formControlName="garages" onlyNumber maxlength="2">
-                                </mat-form-field>
-                            </div>
-
-                            <div fxFlex="100" fxFlex.gt-xs="50" class="px-2">
-                                <mat-form-field appearance="outline" class="w-100">
-                                    <mat-label>Area (ft²)</mat-label>
-                                    <input matInput placeholder="Area" autocomplete="off" formControlName="area" onlyNumber>
-                                </mat-form-field>
-                            </div>
-
-                            <div fxFlex="100" fxFlex.gt-xs="50" class="px-2">
-                                <mat-form-field appearance="outline" class="w-100">
-                                    <mat-label>Year Built</mat-label>
-                                    <input matInput placeholder="Year Built" autocomplete="off" formControlName="yearBuilt" onlyNumber maxlength="4">
-                                </mat-form-field>
-                            </div>
-
-                            <div fxFlex="100" class="mb-2">
-                                <p class="uppercase m-2 fw-500">Features</p>
-                                <div formArrayName="features" fxLayout="row wrap">
-                                    <div [formGroupName]="i" *ngFor="let control of submitForm.get('additional')['controls'].features['controls']; index as i" class="p-2">
-                                        <mat-checkbox formControlName="selected">{{features[i].name}}</mat-checkbox>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div fxFlex="100" class="mt-3 p-2" fxLayoutAlign="space-between center">
-                                <button mat-raised-button color="primary" matStepperPrevious fxLayout="row" fxLayoutAlign="center center" type="button">
-                          <mat-icon>navigate_before</mat-icon>
-                          <span class="mx-1 uppercase">Back</span>  
-                        </button>
-                                <button mat-raised-button color="primary" matStepperNext fxLayout="row" fxLayoutAlign="center center" type="button">
-                          <span class="mx-1 uppercase">Next</span>                    
-                          <mat-icon>navigate_next</mat-icon>
-                        </button>
-                            </div>
-
-
-                        </form>
-
-
-                    </div>
-                </mat-step>
-
                 <mat-step label="Media">
                     <div class="step-content">
 
@@ -315,7 +243,6 @@
             </mat-horizontal-stepper>
 
         </mat-card>
-
 
     </div>
 </div>

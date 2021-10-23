@@ -1,0 +1,19 @@
+:host ::ng-deep .mat-horizontal-content-container {
+    padding: 0 !important;
+}
+
+:host ::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header,
+.mat-vertical-stepper-header {
+    padding: 15px 15px 0px 15px;
+}
+
+:host ::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header .mat-step-label {
+    padding: 10px 0 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+:host ::ng-deep .mat-step-label {
+    font-size: 12px;
+    font-weight: 400;
+}
