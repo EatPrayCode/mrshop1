@@ -20,12 +20,12 @@
     top: 20px;
 }
 
-.toolbar-container {
+.layout-inner-container {
     overflow-y: scroll;
 }
 
-.toolbar-container,
-.toolbar-container .tool-bar-row {
+.layout-inner-container,
+.layout-inner-container .tool-bar-row {
     background: #fff;
     top: 0;
     right: 0;
@@ -34,32 +34,32 @@
     z-index: 3;
 }
 
-.toolbar-container .tool-bar-row {
+.layout-inner-container .tool-bar-row {
     border-bottom: 1px solid #e8edf3;
     width: 100%;
     position: relative;
 }
 
-.toolbar-container .tool-bar-row .search-row {
+.layout-inner-container .tool-bar-row .search-row {
     padding: 5px 5px 5px 5px;
     display: flex;
     align-items: center;
 }
 
-.toolbar-container .tool-bar-row .search-row i {
+.layout-inner-container .tool-bar-row .search-row i {
     padding: 5px 5px 5px 5px;
     font-size: 25px;
     color: #506d85;
     font-weight: 300;
 }
 
-.toolbar-container .tool-bar-row .search-row .search-container {
+.layout-inner-container .tool-bar-row .search-row .search-container {
     display: flex;
     width: 100%;
     position: relative;
 }
 
-.toolbar-container .tool-bar-row .search-row .search-container i {
+.layout-inner-container .tool-bar-row .search-row .search-container i {
     font-size: 15px;
     color: #506d85;
     font-weight: 300;
@@ -68,7 +68,7 @@
     left: 13px;
 }
 
-.toolbar-container .tool-bar-row .search-row .search-container input {
+.layout-inner-container .tool-bar-row .search-row .search-container input {
     border: 0;
     background: #f5f8fa;
     border-radius: 50px;
@@ -80,11 +80,11 @@
     font-weight: 500;
 }
 
-.toolbar-container .content-layout-container {
+.layout-inner-container .content-layout-container {
     display: flex;
 }
 
-.toolbar-container .content-layout-container .left-layout-container {
+.layout-inner-container .content-layout-container .left-layout-container {
     width: 30%;
     background: #f5f8fa;
     overflow: scroll;
@@ -92,32 +92,33 @@
     position: relative;
 }
 
-.toolbar-container .content-layout-container .left-layout-container .left-nav-list a {
+.layout-inner-container .content-layout-container .left-layout-container .left-nav-list a {
     display: block;
-    padding: 23px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #e8edf3;
     font-size: 14px;
     color: #37445a;
     font-weight: 500;
+    text-align: center;
 }
 
-.toolbar-container .content-layout-container .left-layout-container .left-nav-list a span {
+.layout-inner-container .content-layout-container .left-layout-container .left-nav-list a span {
     display: block;
-    padding: 0 13px;
+    padding: 0 5px;
 }
 
-.toolbar-container .content-layout-container .left-layout-container .left-nav-list .left-layout-nav-item {
+.layout-inner-container .content-layout-container .left-layout-container .left-nav-list .left-layout-nav-item {
     background: #fff;
     font-weight: 700;
 }
 
-.toolbar-container .content-layout-container .left-layout-container .left-nav-list .left-layout-nav-item span {
+.layout-inner-container .content-layout-container .left-layout-container .left-nav-list .left-layout-nav-item span {
     display: block;
-    padding: 0 13px;
+    padding: 0 5px;
     border-left: 2px solid #00b9f5;
 }
 
-.toolbar-container .content-layout-container .right-layout-container {
+.layout-inner-container .content-layout-container .right-layout-container {
     display: flex;
     flex-wrap: wrap;
     padding: 0px 2px 2px 2px;
@@ -128,7 +129,7 @@
     max-height: 80vh;
 }
 
-.toolbar-container .content-layout-container .right-layout-container a {
+.layout-inner-container .content-layout-container .right-layout-container a {
     text-align: center;
     width: 33.33%;
     margin-bottom: 25px;
@@ -137,18 +138,18 @@
     flex-direction: column;
 }
 
-.toolbar-container .content-layout-container .right-layout-container a .img-container {
+.layout-inner-container .content-layout-container .right-layout-container a .img-container {
     margin-bottom: 5px;
     width: 64px;
     height: auto;
 }
 
-.toolbar-container .content-layout-container .right-layout-container a .img-container img {
+.layout-inner-container .content-layout-container .right-layout-container a .img-container img {
     width: auto;
     height: 40px;
 }
 
-.toolbar-container .content-layout-container .right-layout-container a span {
+.layout-inner-container .content-layout-container .right-layout-container a span {
     text-align: center;
     width: 70px;
     font-size: 12px;
