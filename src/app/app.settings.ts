@@ -31,7 +31,7 @@ export class Settings {
 export class AppSettings {
     public settings = new Settings(
         'HouseKey',  // theme name
-        'orange-dark',      // blue, green, red, pink, purple, grey, orange-dark
+        'red',      // blue, green, red, pink, purple, grey, orange-dark
         1,           // 1 or 2  
         true,        // true = sticky, false = not sticky
         'image',     // default, image, carousel, map, video
