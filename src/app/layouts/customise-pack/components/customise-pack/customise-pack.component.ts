@@ -12,20 +12,6 @@ export class CustomisePackComponent implements OnChanges {
   @Output() packChange = new EventEmitter();
   form: FormGroup = new FormGroup({});
   packLoaded: any = false;
-  rightList: any = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},];
-  tiles: any[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
 
   ngOnChanges(changeRecord: SimpleChanges) {
     const record = changeRecord.inputData;
@@ -48,6 +34,7 @@ export class CustomisePackComponent implements OnChanges {
 
   constructor(private fb: FormBuilder) {
     if (this.inputData && this.inputData.packId) {
+      this.inputData = mockMonthlyHomeEssentialsProduct2
       this.initialisePage(this.inputData);
       this.packLoaded = true;
     }
