@@ -1,9 +1,9 @@
 import { Router } from '@angular/router';
 import { AppResolver } from './app.resolver';
-import { StateService } from 'src/app/services/state.service';
-import { AuthService } from '../core/auth/auth.service';
 import { Injectable } from "@angular/core";
-import { AuthGuard } from '../core/auth/guards/auth.guard';
+import { StateService } from './state.service';
+import { AuthService } from 'src/app/core/auth/auth.service';
+import { AuthGuard } from 'src/app/core/auth/guards/auth.guard';
 
 @Injectable({
   providedIn: 'root'

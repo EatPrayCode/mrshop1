@@ -1,8 +1,8 @@
-import { FirebaseApiService } from '../core/firebase-api.service';
 import { Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
+import { FirebaseApiService } from 'src/app/core/firebase-api.service';
 
 @Injectable({
   providedIn: 'root'

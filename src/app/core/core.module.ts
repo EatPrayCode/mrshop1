@@ -12,10 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
     AuthModule,
     FirebaseModule
   ],
-  exports: [
-    AuthModule,
-    FirebaseModule,
-    HttpClientModule
-  ]
+  exports: []
 })
 export class CoreModule { }

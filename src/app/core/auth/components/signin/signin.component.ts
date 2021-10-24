@@ -4,8 +4,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../auth.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { StateService } from 'src/app/services/state.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { StateService } from 'src/app/pages/services/state.service';
 export type loginAction = 'register' | 'signIn' | 'forgotPassword' | 'changePassword' | 'changeEmail' | 'delete' | 'signOut';
 
 @Component({

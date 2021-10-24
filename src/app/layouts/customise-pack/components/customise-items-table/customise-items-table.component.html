@@ -5,27 +5,12 @@
     </div>
 
     <div class="c-card__body" layout="row nowrap" xs-layout="row wrap" flex>
-        <div (click)="openViewEditPackDialog(task)" class="c-flight-card__flight-schedule" flex="auto" xs-order="1">
+        <div class="c-flight-card__flight-schedule" flex="auto" xs-order="1">
             <strong>08:45 - 09:55</strong>
+            <sub>Lufthansa - Lufthansa CityLine</sub>
             <sub>Lufthansa - Lufthansa CityLine</sub>
         </div>
 
-        <div layout="row reversed" xs-layout="column" xs-flex flex="nogrow" layout-align="space-around" xs-order="4">
-            <div class="c-flight-card__duration" xs-order="2">
-                <strong>1h 10min</strong>
-                <sub class="hidden-xs">MUC-BER</sub>
-            </div>
-
-            <div class="c-flight-card__stops" xs-order="1">
-                <strong>Nonstop</strong>
-            </div>
-        </div>
-
-        <div class="c-flight-card__price" xs-order="5">
-            <strong>80E</strong>
-            <sub>Hin- und Rücklug</sub>
-        </div>
-
-        <div class="c-flight-card__action material-icons c-flight-card__action--fav" flex="nogrow" layout xs-order="2"></div>
+        <div (click)="openViewEditPackDialog(task)" class="c-flight-card__action material-icons c-flight-card__action--fav" flex="nogrow" layout xs-order="2"></div>
     </div>
 </article>

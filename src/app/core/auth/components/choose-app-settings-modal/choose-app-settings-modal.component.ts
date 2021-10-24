@@ -1,12 +1,12 @@
 import { of } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { AppAuthService } from 'src/app/services/app.auth.service';
 import { MatDialogRef } from '@angular/material/dialog';
-import { DataService } from '../../../../services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { StateService } from 'src/app/services/state.service';
 import { appSettingsState } from 'src/app/mock-data/app.models';
+import { AppAuthService } from 'src/app/pages/services/app.auth.service';
+import { DataService } from 'src/app/pages/services/data.service';
+import { StateService } from 'src/app/pages/services/state.service';
 
 @Component({
   selector: 'app-choose-app-settings-modal',

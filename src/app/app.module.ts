@@ -44,8 +44,7 @@ import { VerticalMenuComponent } from './theme/components/menu/vertical-menu/ver
 import { FooterComponent } from './theme/components/footer/footer.component';
 import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
 import { LayoutsModule } from './layouts/layout.module';
-
-
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -85,6 +84,7 @@ import { LayoutsModule } from './layouts/layout.module';
     NgProgressHttpModule, 
     InputFileModule.forRoot(config),
     LayoutsModule,
+    CoreModule,
     AppRoutingModule,
     SharedModule
   ],

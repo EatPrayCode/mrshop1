@@ -4,8 +4,8 @@ import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/r
 import { Observable, of } from "rxjs";
 import { delay, map, switchMap, take, tap } from "rxjs/operators";
 import { StateService } from "./state.service";
-import { ChooseAppSettingsModalComponent } from '../core/auth/components/choose-app-settings-modal/choose-app-settings-modal.component';
 import { appSettingsState } from '../../mock-data/app.models';
+import { ChooseAppSettingsModalComponent } from 'src/app/core/auth/components/choose-app-settings-modal/choose-app-settings-modal.component';
 
 @Injectable({
   providedIn: 'root'
