@@ -9,10 +9,17 @@ import { BlankComponent } from './layouts/blank/blank.component';
 export const routes: Routes = [
     {
         path: '',
-        component: PagesComponent,
+        component: BlankComponent,
         // component: KitchensinkComponent,
         children: [
             { path: '', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
+        ]
+    },
+    {
+        path: '',
+        component: PagesComponent,
+        // component: KitchensinkComponent,
+        children: [
             // { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
             { path: 'organiser', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
             { path: 'payment-packs', loadChildren: () => import('./pages/payment-packs/payment-packs.module').then(m => m.PaymentPacksModule) },
