@@ -321,3 +321,7 @@ $screen-md-max: ($screen-lg-min - 1);
         }
     }
 }
+
+.mat-dialog-container {
+    padding: 0px !important;
+}

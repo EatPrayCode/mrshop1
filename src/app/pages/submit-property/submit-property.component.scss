@@ -8,12 +8,8 @@
 }
 
 :host ::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header .mat-step-label {
-    padding: 10px 0 0 0;
+    padding: 5px 0 0 0;
     text-align: center;
     width: 100%;
-}
-
-:host ::ng-deep .mat-step-label {
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 11px;
 }
