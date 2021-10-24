@@ -1,4 +1,4 @@
-import { CustomisePackModule } from './customise-pack/customise-pack.module';
+import { CustomisePackModule } from '../../layouts/customise-pack/customise-pack.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -12,11 +12,19 @@ export const routes = [
 ];
 
 @NgModule({
-  declarations: [SubmitPropertyComponent],
+  declarations: [
+    SubmitPropertyComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
+    AgmCoreModule, 
+    InputFileModule,
+    CustomisePackModule
+  ],
+  exports: [
+    SubmitPropertyComponent,
     AgmCoreModule, 
     InputFileModule,
     CustomisePackModule

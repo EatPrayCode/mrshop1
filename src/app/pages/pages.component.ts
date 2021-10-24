@@ -114,7 +114,6 @@ export class PagesComponent implements OnInit {
   }
 
   ngAfterViewInit(){
-    document.getElementById('preloader').classList.add('hide');
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {        
         this.sidenav.close();

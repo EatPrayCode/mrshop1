@@ -5,7 +5,7 @@
 
             <mat-horizontal-stepper labelPosition="bottom" #horizontalStepper linear="true" class="submit-property" (selectionChange)="onSelectionChange($event)">
 
-                <mat-step label="Basic">
+                <mat-step label="Customise">
                     <div class="step-content">
                         <app-customise-items-table></app-customise-items-table>
                     </div>
@@ -95,7 +95,7 @@
                     </div>
                 </mat-step>
 
-                <mat-step label="Media">
+                <mat-step label="Payment">
                     <div class="step-content">
 
                         <form formGroupName="media" fxLayout="row wrap">

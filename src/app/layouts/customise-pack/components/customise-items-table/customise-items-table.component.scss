@@ -214,7 +214,7 @@ $screen-md-max: ($screen-lg-min - 1);
             font-size: 150%;
             font-weight: 700;
             @media screen and (min-width: $screen-sm-min) {
-                padding: 20px;
+                padding: 5px;
             }
         }
     }
@@ -225,7 +225,7 @@ $screen-md-max: ($screen-lg-min - 1);
         width: 50px;
         transition: all .5s;
         @media screen and (min-width: $screen-sm-min) {
-            padding: 20px;
+            padding: 5px;
             width: 80px;
         }
     }
@@ -261,7 +261,7 @@ $screen-md-max: ($screen-lg-min - 1);
     .c-flight-card__flight-schedule {
         width: calc(100% - #{$icon-size} - #{$icon-size});
         @media screen and (min-width: $screen-sm-min) {
-            padding: 20px;
+            padding: 5px;
             width: auto;
         }
     }
@@ -274,26 +274,24 @@ $screen-md-max: ($screen-lg-min - 1);
             }
         }
         @media screen and (min-width: $screen-sm-min) {
-            padding: 20px;
+            padding: 5px;
             text-align: center;
             width: 140px;
         }
     }
     .c-flight-card__stops {
-        padding-top: 20px;
         white-space: nowrap;
         @media screen and (min-width: $screen-sm-min) {
-            padding: 20px;
+            padding: 5px;
             text-align: center;
             width: 160px;
         }
     }
     .c-flight-card__price {
-        padding-top: 20px;
         text-align: right;
         white-space: nowrap;
         @media screen and (min-width: $screen-sm-min) {
-            padding: 20px;
+            padding: 5px;
         }
     }
     .c-flight-card__action {
@@ -319,7 +317,7 @@ $screen-md-max: ($screen-lg-min - 1);
         }
         @media screen and (min-width: $screen-sm-min) {
             align-items: center;
-            padding: 20px;
+            padding: 5px;
         }
     }
 }

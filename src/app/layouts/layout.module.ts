@@ -1,3 +1,5 @@
+import { CustomisePackModule } from './customise-pack/customise-pack.module';
+import { SubmitPropertyModule } from './../pages/submit-property/submit-property.module';
 import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
@@ -15,11 +17,8 @@ import { BlankComponent } from './blank/blank.component';
     CommonModule,
     HttpClientModule,
     SharedModule,
-    FormsModule,
-    ReactiveFormsModule
+    CustomisePackModule
   ],
-  exports: [
-    
-  ]
+  exports: []
 })
 export class LayoutsModule { }

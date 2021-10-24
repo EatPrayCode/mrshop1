@@ -1,5 +1,5 @@
-import { mockMonthlyHomeEssentialsProduct2 } from './../../../../../mock-data/mockJsonPacks';
-import { ViewEditPackComponent } from './../view-edit-pack/view-edit-pack.component';
+import { mockMonthlyHomeEssentialsProduct2 } from '../../../../mock-data/mockJsonPacks';
+import { ViewEditPackComponent } from '../view-edit-pack/view-edit-pack.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';

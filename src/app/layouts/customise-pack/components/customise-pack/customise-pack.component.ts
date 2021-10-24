@@ -12,7 +12,7 @@ export class CustomisePackComponent implements OnChanges {
   @Output() packChange = new EventEmitter();
   form: FormGroup = new FormGroup({});
   packLoaded: any = false;
-
+  rightList: any = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},];
   tiles: any[] = [
     {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
     {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},

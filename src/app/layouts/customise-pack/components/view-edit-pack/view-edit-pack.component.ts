@@ -12,18 +12,21 @@ export class ViewEditPackComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  constructor(
-    public dialogRef: MatDialogRef<ViewEditPackComponent>,
-    //@Optional() is used to prevent error if no data is passed
-    @Optional() @Inject(MAT_DIALOG_DATA) public data: any) {
+  rightList: any = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},];
 
-    this.inputData = data.pack.packsData;
+  constructor(
+    // public dialogRef: MatDialogRef<ViewEditPackComponent>,
+    //@Optional() is used to prevent error if no data is passed
+    @Optional() @Inject(MAT_DIALOG_DATA) public data: any) 
+    {
+
+    // this.inputData = data.pack.packsData;
   }
 
   doAction() { }
 
   closeDialog() {
-    this.dialogRef.close({ event: 'Cancel' });
+    // this.dialogRef.close({ event: 'Cancel' });
   }
 
 }

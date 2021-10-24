@@ -31,7 +31,8 @@ export class AppComponent {
           }
         }); 
       }            
-    });    
+    });
+    document.getElementById('preloader').classList.add('hide');
   }
 
 }
