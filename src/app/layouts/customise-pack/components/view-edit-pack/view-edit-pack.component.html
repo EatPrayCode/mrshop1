@@ -1,1 +1,22 @@
-<app-customise-pack [inputData]="inputData"></app-customise-pack>
+<div class="main-container">
+
+    <div class="main-header">Pack Name by Vendor</div>
+
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <app-customise-pack [inputData]="inputData"></app-customise-pack>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-navigation">
+        Pack Summary:
+    </div>
+
+</div>
+
+<div class="main-footer">
+    <button mat-raised-button color="primary" class="uppercase mx-2">Cancel</button>
+    <a mat-raised-button color="accent" class="uppercase mx-2">Continue</a>
+</div>
