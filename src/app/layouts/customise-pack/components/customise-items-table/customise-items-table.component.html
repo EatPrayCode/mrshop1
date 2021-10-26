@@ -7,9 +7,12 @@
         <div class="c-flight-card__flight-schedule" flex="auto" xs-order="1">
             <strong>08:45 - 09:55</strong>
             <sub>Lufthansa - Lufthansa CityLine</sub>
-            <sub>Lufthansa - Lufthansa CityLine</sub>
+            <sub>                          
+                <mat-icon>mic</mat-icon>
+                <mat-icon (click)="openViewEditPackDialog(task)">edit</mat-icon>
+                <mat-icon>delete</mat-icon>
+            </sub>
         </div>
 
-        <div (click)="openViewEditPackDialog(task)" class="c-flight-card__action material-icons c-flight-card__action--fav" flex="nogrow" layout xs-order="2"></div>
     </div>
 </article>
