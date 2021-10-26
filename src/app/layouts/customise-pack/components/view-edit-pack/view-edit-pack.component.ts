@@ -1,10 +1,11 @@
-import { Component, Inject, OnInit, Optional } from '@angular/core';
+import { Component, Inject, OnInit, Optional, ViewEncapsulation } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-view-edit-pack',
   templateUrl: './view-edit-pack.component.html',
-  styleUrls: ['./view-edit-pack.component.scss']
+  styleUrls: ['./view-edit-pack.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ViewEditPackComponent implements OnInit {
 
