@@ -40,7 +40,17 @@
                     <div class="img-container">
                         <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Mini/Cooper-Convertible/5182/1624430518066/front-left-side-47.jpg?tr=w-375" alt="Name">
                     </div>
-                    <span>Name</span>
+                    <span>
+                        Name and description
+                    </span>
+                    <div>
+                        <mat-icon [matMenuTriggerFor]="menu">more_vert</mat-icon>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item>Add to Box</button>
+                            <button mat-menu-item>Organise this</button>
+                            <button mat-menu-item>Choose best for my budget</button>
+                        </mat-menu>
+                    </div>
                 </a>
             </div>
         </div>
