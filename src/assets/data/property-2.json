@@ -1,19 +1,19 @@
 {
     "id": 2,
-    "title": "Centrally located office", 
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+    "title": "Centrally located office",
+    "desc": "Lorem ipsum dolor sit amet consectetur.",
     "propertyType": "Office",
     "propertyStatus": ["For Rent", "No Fees"],
     "city": "Los Angeles",
     "zipCode": "90044",
     "neighborhood": ["Hollywood", "Highland Park"],
     "street": ["Hollywood Street #2", "Highland Park Street #1"],
-    "location" : {
+    "location": {
         "lat": 33.954220,
         "lng": -118.293730
     },
-    "formattedAddress" : "1052 W 91st St, Los Angeles, CA 90044, USA",
-    "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"], 
+    "formattedAddress": "1052 W 91st St, Los Angeles, CA 90044, USA",
+    "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
     "featured": true,
     "priceDollar": {
         "sale": null,
@@ -33,8 +33,7 @@
     "yearBuilt": 2012,
     "ratingsCount": 4,
     "ratingsValue": 400,
-    "additionalFeatures": [                
-        {
+    "additionalFeatures": [{
             "name": "Heat",
             "value": "Natural Gas"
         },
@@ -67,8 +66,7 @@
             "value": "2"
         }
     ],
-    "gallery": [
-        {
+    "gallery": [{
             "small": "assets/images/props/office/1-small.jpg",
             "medium": "assets/images/props/office/1-medium.jpg",
             "big": "assets/images/props/office/1-big.jpg"
@@ -99,8 +97,7 @@
             "big": "assets/images/props/office/6-big.jpg"
         }
     ],
-    "plans": [
-        {
+    "plans": [{
             "name": "First floor",
             "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
             "area": {
@@ -123,8 +120,7 @@
             "image": "assets/images/others/plan-2.jpg"
         }
     ],
-    "videos": [
-        {
+    "videos": [{
             "name": "Video",
             "link": "http://themeseason.com/data/videos/video-1.mp4"
         },

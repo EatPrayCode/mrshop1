@@ -1,4 +1,4 @@
-<mat-card class="property-item p-0" [ngClass]="[viewType + '-item', 'column-'+column]" [class.full-width-page]="fullWidthPage" fxLayout="row wrap">
+<div class="property-item p-0" [ngClass]="[viewType + '-item', 'column-'+column]" [class.full-width-page]="fullWidthPage" fxLayout="row wrap">
 
     <div fxFlex="100" fxShrink="3" [fxFlex.gt-sm]="(viewType=='list') ? 40 : 100" [fxFlex.sm]="(viewType=='list') ? 50 : 100" class="thumbnail-section">
 
@@ -33,7 +33,7 @@
         </div>
 
     </div>
-    <div fxFlex="100" [fxFlex.gt-sm]="(viewType=='list') ? 60 : 100" [fxFlex.sm]="(viewType=='list') ? 50 : 100">
+    <div fxFlex="100" class="pack-info" [fxFlex.gt-sm]="(viewType=='list') ? 60 : 100" [fxFlex.sm]="(viewType=='list') ? 50 : 100">
 
         <div fxLayout="column" fxLayoutAlign="start stretch" class="h-100">
             <mat-card-content class="mb-0">
@@ -63,24 +63,25 @@
                     <p>{{property?.desc}}</p>
                 </div>
 
-                <div class="features mt-3">
-                    <p><span>Property size</span><span>{{property?.area.value}} {{property?.area.unit}}</span></p>
-                    <p><span>Garages</span><span>{{property?.garages}}</span></p>
+                <div class="features">
+                    <p class="features-row"><span>Property size</span><span>{{property?.area.value}} {{property?.area.unit}}</span></p>
+                    <p class="features-row"><span>Garages</span><span>{{property?.garages}}</span></p>
                 </div>
 
             </mat-card-content>
             <div class="sticky-footer-helper" fxFlex="grow"></div>
             <mat-card-actions class="m-0 p-0" fxLayoutAlign="space-between center">
-                <p fxLayout="row" class="date mb-0">
-                    <mat-icon class="text-muted">date_range</mat-icon>
-                    <span class="mx-2">{{property?.published | date:"dd MMMM, yyyy" }}</span>
-                </p>
                 <div>
                     <a [routerLink]="['/properties', property?.id]" mat-stroked-button color="primary" class="uppercase">Details</a>
+                </div>
+                <div>
+                    <a [routerLink]="['/properties', property?.id]" mat-mini-fab color="primary" class="uppercase">
+                        <mat-icon>shopping_cart</mat-icon>
+                    </a>
                 </div>
             </mat-card-actions>
         </div>
 
     </div>
 
-</mat-card>
+</div>

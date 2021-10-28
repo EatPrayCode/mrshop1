@@ -47,7 +47,7 @@
         }
     }
     .title {
-        font-size: 18px;
+        font-size: 14px;
         a {
             transition: 0.2s;
             text-decoration: none;
@@ -56,13 +56,14 @@
     .address,
     .date {
         font-style: italic;
-        margin-top: 8px;
+        margin-top: 2px;
         .mat-icon {
             margin-left: -4px;
         }
         margin-bottom: 0px;
     }
     .price {
+        font-size: 1rem;
         span {
             display: block;
         }
@@ -112,63 +113,63 @@
         flex-flow: column !important;
         &.column-2 {
             .title {
-                font-size: 22px;
+                font-size: 14px;
             }
             .price {
-                font-size: 18px;
+                font-size: 14px;
             }
         }
         &.column-3 {
             .title {
-                font-size: 18px;
+                font-size: 14px;
             }
             .address,
             .date {
                 font-size: 12px;
                 .mat-icon {
-                    font-size: 18px;
-                    width: 18px;
-                    height: 18px;
+                    font-size: 14px;
+                    width: 14px;
+                    height: 14px;
                 }
             }
         }
         &.full-width-page {
             &.column-2 {
                 .title {
-                    font-size: 28px;
+                    font-size: 14px;
                 }
                 .price {
-                    font-size: 20px;
+                    font-size: 14px;
                 }
             }
             &.column-3 {
                 .title {
-                    font-size: 22px;
+                    font-size: 14px;
                 }
                 .address,
                 .date {
                     font-size: 14px;
                     .mat-icon {
-                        font-size: 24px;
-                        width: 24px;
-                        height: 24px;
+                        font-size: 14px;
+                        width: 14px;
+                        height: 14px;
                     }
                 }
                 .price {
-                    font-size: 18px;
+                    font-size: 14px;
                 }
             }
             &.column-4 {
                 .title {
-                    font-size: 18px;
+                    font-size: 14px;
                 }
                 .address,
                 .date {
                     font-size: 12px;
                     .mat-icon {
-                        font-size: 18px;
-                        width: 18px;
-                        height: 18px;
+                        font-size: 14px;
+                        width: 14px;
+                        height: 14px;
                     }
                 }
             }
@@ -176,11 +177,11 @@
     }
     &.list-item {
         .title {
-            font-size: 28px;
+            font-size: 14px;
             margin-top: -8px;
         }
         .price {
-            font-size: 20px;
+            font-size: 14px;
         }
         .features {
             display: flex;
@@ -205,37 +206,46 @@
     .property-item {
         &.grid-item {
             .title {
-                font-size: 16px;
+                font-size: 14px;
             }
             &.column-2 {
                 .title {
-                    font-size: 16px;
+                    font-size: 14px;
                 }
             }
             &.full-width-page {
                 &.column-2 {
                     .title {
-                        font-size: 16px;
+                        font-size: 14px;
                     }
                 }
             }
         }
         &.list-item {
             .title {
-                font-size: 16px;
+                font-size: 14px;
             }
             .address,
             .date {
                 font-size: 12px;
                 .mat-icon {
-                    font-size: 18px;
-                    width: 18px;
-                    height: 18px;
+                    font-size: 14px;
+                    width: 14px;
+                    height: 14px;
                 }
             }
             .price {
-                font-size: 18px;
+                font-size: 14px;
             }
         }
     }
+}
+
+.features-row {
+    margin-bottom: 10px;
+}
+
+.pack-info {
+    padding: 5px;
+    border: 1px solid brown;
 }

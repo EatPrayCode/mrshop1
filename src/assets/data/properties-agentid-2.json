@@ -1,21 +1,20 @@
-[
-    {
+[{
         "id": 1,
-        "title": "Modern and quirky flat", 
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+        "title": "Modern and quirky flat",
+        "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Apartment",
         "propertyStatus": ["For Sale"],
         "city": "New York",
         "zipCode": "10033",
         "neighborhood": ["Astoria", "Midtown"],
         "street": ["Astoria Street #1", "Midtown Street #2"],
-        "location" : {
+        "location": {
             "lat": 40.849150,
             "lng": -73.935100
         },
-        "formattedAddress" : "611 W 180th St, New York, NY 10033, USA",
+        "formattedAddress": "Pack Description this long and more",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Swimming Pool", "TV Cable", "WiFi"],
-        "featured": false, 
+        "featured": false,
         "priceDollar": {
             "sale": 1300000,
             "rent": null
@@ -34,8 +33,7 @@
         "yearBuilt": 2007,
         "ratingsCount": 3,
         "ratingsValue": 280,
-        "additionalFeatures": [                
-            {
+        "additionalFeatures": [{
                 "name": "Heat",
                 "value": "Natural Gas"
             },
@@ -68,8 +66,7 @@
                 "value": "2"
             }
         ],
-        "gallery": [         
-            {
+        "gallery": [{
                 "small": "assets/images/props/flat-1/1-small.jpg",
                 "medium": "assets/images/props/flat-1/1-medium.jpg",
                 "big": "assets/images/props/flat-1/1-big.jpg"
@@ -90,8 +87,7 @@
                 "big": "assets/images/props/flat-1/4-big.jpg"
             }
         ],
-        "plans": [
-            {
+        "plans": [{
                 "name": "First floor",
                 "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
                 "area": {
@@ -114,8 +110,7 @@
                 "image": "assets/images/others/plan-2.jpg"
             }
         ],
-        "videos": [
-            {
+        "videos": [{
                 "name": "Video",
                 "link": "http://themeseason.com/data/videos/video-1.mp4"
             },
@@ -127,24 +122,24 @@
         "published": "2012-08-12 17:17:30",
         "lastUpdate": "2019-05-20 14:20:00",
         "views": 322
-    }, 
+    },
     {
         "id": 3,
-        "title": "Comfortable family house", 
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+        "title": "Comfortable family house",
+        "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "House",
         "propertyStatus": ["For Sale", "Open House"],
         "city": "Seattle",
         "zipCode": "98104",
         "neighborhood": ["Belltown"],
         "street": ["Belltown Street #1", "Belltown Street #2"],
-        "location" : {
+        "location": {
             "lat": 47.602760,
             "lng": -122.331440
         },
-        "formattedAddress" : "3rd Ave & James St, Seattle, WA 98104, USA", 
+        "formattedAddress": "3rd Ave & James St, Seattle, WA 98104, USA",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Gym", "Fireplace", "Sauna", "TV Cable", "WiFi"],
-        "featured": false, 
+        "featured": false,
         "priceDollar": {
             "sale": 2550000,
             "rent": null
@@ -163,8 +158,7 @@
         "yearBuilt": 2010,
         "ratingsCount": 7,
         "ratingsValue": 560,
-        "additionalFeatures": [                
-            {
+        "additionalFeatures": [{
                 "name": "Heat",
                 "value": "Natural Gas"
             },
@@ -197,12 +191,11 @@
                 "value": "2"
             }
         ],
-        "gallery": [            
-            {
+        "gallery": [{
                 "small": "assets/images/props/house-1/1-small.jpg",
                 "medium": "assets/images/props/house-1/1-medium.jpg",
                 "big": "assets/images/props/house-1/1-big.jpg"
-            },         
+            },
             {
                 "small": "assets/images/props/house-1/2-small.jpg",
                 "medium": "assets/images/props/house-1/2-medium.jpg",
@@ -229,8 +222,7 @@
                 "big": "assets/images/props/house-1/6-big.jpg"
             }
         ],
-        "plans": [
-            {
+        "plans": [{
                 "name": "First floor",
                 "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
                 "area": {
@@ -253,8 +245,7 @@
                 "image": "assets/images/others/plan-2.jpg"
             }
         ],
-        "videos": [
-            {
+        "videos": [{
                 "name": "Video",
                 "link": "http://themeseason.com/data/videos/video-1.mp4"
             },
@@ -266,24 +257,24 @@
         "published": "2011-05-12 18:20:00",
         "lastUpdate": "2019-06-18 14:20:00",
         "views": 587
-    }, 
+    },
     {
         "id": 6,
-        "title": "Bright and sunny house", 
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+        "title": "Bright and sunny house",
+        "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "House",
         "propertyStatus": ["For Rent", "No Fees"],
         "city": "Chicago",
         "zipCode": "60609",
         "neighborhood": ["Englewood", "Austin"],
         "street": ["Englewood Street #2", "Austin Street #2"],
-        "location" : {
+        "location": {
             "lat": 41.814080,
             "lng": -87.660410
         },
-        "formattedAddress": "1400 W 44th St, Chicago, IL 60609, USA", 
+        "formattedAddress": "1400 W 44th St, Chicago, IL 60609, USA",
         "features": ["Refrigerator", "Barbeque", "Dryer", "Microwave", "Gym", "Swimming Pool", "Sauna", "TV Cable", "WiFi"],
-        "featured": true, 
+        "featured": true,
         "priceDollar": {
             "sale": null,
             "rent": 9000
@@ -302,8 +293,7 @@
         "yearBuilt": 2017,
         "ratingsCount": 5,
         "ratingsValue": 400,
-        "additionalFeatures": [                
-            {
+        "additionalFeatures": [{
                 "name": "Heat",
                 "value": "Natural Gas"
             },
@@ -336,8 +326,7 @@
                 "value": "2"
             }
         ],
-        "gallery": [
-            {
+        "gallery": [{
                 "small": "assets/images/props/house-2/1-small.jpg",
                 "medium": "assets/images/props/house-2/1-medium.jpg",
                 "big": "assets/images/props/house-2/1-big.jpg"
@@ -358,8 +347,7 @@
                 "big": "assets/images/props/house-2/4-big.jpg"
             }
         ],
-        "plans": [
-            {
+        "plans": [{
                 "name": "First floor",
                 "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
                 "area": {
@@ -382,8 +370,7 @@
                 "image": "assets/images/others/plan-2.jpg"
             }
         ],
-        "videos": [
-            {
+        "videos": [{
                 "name": "Video",
                 "link": "http://themeseason.com/data/videos/video-1.mp4"
             },
@@ -398,21 +385,21 @@
     },
     {
         "id": 7,
-        "title": "Luxury office space", 
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+        "title": "Luxury office space",
+        "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Office",
         "propertyStatus": ["For Sale", "Hot Offer"],
         "city": "New York",
         "zipCode": "10019",
         "neighborhood": ["Englewood", "Austin"],
         "street": ["Englewood Street #2", "Austin Street #2"],
-        "location" : {
+        "location": {
             "lat": 40.716761,
             "lng": -73.999958
         },
-        "formattedAddress": "230 W 55th St, New York, NY 10019, USA", 
+        "formattedAddress": "230 W 55th St, New York, NY 10019, USA",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Gym", "Swimming Pool", "Sauna", "TV Cable", "WiFi"],
-        "featured": false, 
+        "featured": false,
         "priceDollar": {
             "sale": 2500000,
             "rent": null
@@ -431,8 +418,7 @@
         "yearBuilt": 2017,
         "ratingsCount": 7,
         "ratingsValue": 700,
-        "additionalFeatures": [                
-            {
+        "additionalFeatures": [{
                 "name": "Heat",
                 "value": "Natural Gas"
             },
@@ -465,8 +451,7 @@
                 "value": "2"
             }
         ],
-        "gallery": [
-            {
+        "gallery": [{
                 "small": "assets/images/props/office-2/1-small.jpg",
                 "medium": "assets/images/props/office-2/1-medium.jpg",
                 "big": "assets/images/props/office-2/1-big.jpg"
@@ -497,8 +482,7 @@
                 "big": "assets/images/props/office-2/6-big.jpg"
             }
         ],
-        "plans": [
-            {
+        "plans": [{
                 "name": "First floor",
                 "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
                 "area": {
@@ -521,8 +505,7 @@
                 "image": "assets/images/others/plan-2.jpg"
             }
         ],
-        "videos": [
-            {
+        "videos": [{
                 "name": "Video",
                 "link": "http://themeseason.com/data/videos/video-1.mp4"
             },
@@ -534,5 +517,5 @@
         "published": "2017-08-12 18:20:00",
         "lastUpdate": "2019-03-29 14:20:00",
         "views": 470
-    }  
+    }
 ]

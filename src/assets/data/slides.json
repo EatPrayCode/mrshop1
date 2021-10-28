@@ -1,7 +1,6 @@
-[
-    { 
-        "title": "Modern and quirky flat", 
-        "location": "611 W 180th St, New York, NY 10033, USA",         
+[{
+        "title": "Modern and quirky flat",
+        "location": "Pack Description this long and more",
         "priceDollar": {
             "sale": 1300000,
             "rent": null
@@ -10,11 +9,11 @@
             "sale": 1160000,
             "rent": null
         },
-        "image": "assets/images/props/flat-1/1-big.jpg" 
+        "image": "assets/images/props/flat-1/1-big.jpg"
     },
-    { 
-        "title": "Comfortable family house", 
-        "location": "3rd Ave & James St, Seattle, WA 98104, USA", 
+    {
+        "title": "Comfortable family house",
+        "location": "3rd Ave & James St, Seattle, WA 98104, USA",
         "priceDollar": {
             "sale": 2550000,
             "rent": null
@@ -22,11 +21,11 @@
         "priceEuro": {
             "sale": 2280000,
             "rent": null
-        },  
+        },
         "image": "assets/images/props/house-1/5-big.jpg"
     },
-    { 
-        "title": "Luxury office space", 
+    {
+        "title": "Luxury office space",
         "location": "230 W 55th St, New York, NY 10019, USA",
         "priceDollar": {
             "sale": 2500000,
@@ -38,9 +37,9 @@
         },
         "image": "assets/images/props/office-2/6-big.jpg"
     },
-    { 
-        "title": "Centrally located apartment", 
-        "location": "1627 Vine St, Los Angeles, CA 90028, USA", 
+    {
+        "title": "Centrally located apartment",
+        "location": "1627 Vine St, Los Angeles, CA 90028, USA",
         "priceDollar": {
             "sale": null,
             "rent": 5600
@@ -48,7 +47,7 @@
         "priceEuro": {
             "sale": null,
             "rent": 5000
-        }, 
+        },
         "image": "assets/images/props/apartment/1-big.jpg"
-    } 
+    }
 ]

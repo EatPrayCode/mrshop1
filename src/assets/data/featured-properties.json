@@ -1,20 +1,19 @@
-[
-    {
+[{
         "id": 2,
-        "title": "Centrally located office", 
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+        "title": "Centrally located office",
+        "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Office",
         "propertyStatus": ["For Rent", "No Fees"],
         "city": "Los Angeles",
         "zipCode": "90044",
         "neighborhood": ["Hollywood", "Highland Park"],
         "street": ["Hollywood Street #2", "Highland Park Street #1"],
-        "location" : {
+        "location": {
             "lat": 33.954220,
             "lng": -118.293730
         },
-        "formattedAddress" : "1052 W 91st St, Los Angeles, CA 90044, USA",
-        "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"], 
+        "formattedAddress": "1052 W 91st St, Los Angeles, CA 90044, USA",
+        "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
         "featured": true,
         "priceDollar": {
             "sale": null,
@@ -34,8 +33,7 @@
         "yearBuilt": 2012,
         "ratingsCount": 4,
         "ratingsValue": 400,
-        "additionalFeatures": [                
-            {
+        "additionalFeatures": [{
                 "name": "Heat",
                 "value": "Natural Gas"
             },
@@ -68,8 +66,7 @@
                 "value": "2"
             }
         ],
-        "gallery": [
-            {
+        "gallery": [{
                 "small": "assets/images/props/office/1-small.jpg",
                 "medium": "assets/images/props/office/1-medium.jpg",
                 "big": "assets/images/props/office/1-big.jpg"
@@ -100,8 +97,7 @@
                 "big": "assets/images/props/office/6-big.jpg"
             }
         ],
-        "plans": [
-            {
+        "plans": [{
                 "name": "First floor",
                 "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
                 "area": {
@@ -124,8 +120,7 @@
                 "image": "assets/images/others/plan-2.jpg"
             }
         ],
-        "videos": [
-            {
+        "videos": [{
                 "name": "Video",
                 "link": "http://themeseason.com/data/videos/video-1.mp4"
             },
@@ -140,21 +135,21 @@
     },
     {
         "id": 4,
-        "title": "Spacious and warm flat", 
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+        "title": "Spacious and warm flat",
+        "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Apartment",
         "propertyStatus": ["Hot Offer", "No Fees"],
         "city": "Chicago",
         "zipCode": "60604",
         "neighborhood": ["Riverdale"],
         "street": ["Riverdale Street #1"],
-        "location" : {
+        "location": {
             "lat": 41.878113,
             "lng": -87.629799
         },
-        "formattedAddress": "55 W Jackson Blvd, Chicago, IL 60604, USA", 
+        "formattedAddress": "55 W Jackson Blvd, Chicago, IL 60604, USA",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Gym", "Fireplace", "Sauna", "TV Cable", "WiFi"],
-        "featured": true, 
+        "featured": true,
         "priceDollar": {
             "sale": 1450000,
             "rent": null
@@ -173,8 +168,7 @@
         "yearBuilt": 2002,
         "ratingsCount": 3,
         "ratingsValue": 220,
-        "additionalFeatures": [                
-            {
+        "additionalFeatures": [{
                 "name": "Heat",
                 "value": "Natural Gas"
             },
@@ -207,8 +201,7 @@
                 "value": "2"
             }
         ],
-        "gallery": [
-            {
+        "gallery": [{
                 "small": "assets/images/props/flat-2/1-small.jpg",
                 "medium": "assets/images/props/flat-2/1-medium.jpg",
                 "big": "assets/images/props/flat-2/1-big.jpg"
@@ -234,8 +227,7 @@
                 "big": "assets/images/props/flat-2/5-big.jpg"
             }
         ],
-        "plans": [
-            {
+        "plans": [{
                 "name": "First floor",
                 "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
                 "area": {
@@ -258,8 +250,7 @@
                 "image": "assets/images/others/plan-2.jpg"
             }
         ],
-        "videos": [
-            {
+        "videos": [{
                 "name": "Video",
                 "link": "http://themeseason.com/data/videos/video-1.mp4"
             },
@@ -274,21 +265,21 @@
     },
     {
         "id": 5,
-        "title": "House with a pool", 
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+        "title": "House with a pool",
+        "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "House",
         "propertyStatus": ["Sold", "For Sale"],
         "city": "Seattle",
         "zipCode": "98108",
         "neighborhood": ["Queen Anne", "Belltown"],
         "street": ["Queen Anne Street #1", "Belltown Street #2"],
-        "location" : {
+        "location": {
             "lat": 47.603230,
             "lng": -122.330276
         },
-        "formattedAddress": "5921 17th Ave S, Seattle, WA 98108, USA", 
+        "formattedAddress": "5921 17th Ave S, Seattle, WA 98108, USA",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Gym", "Swimming Pool", "Sauna", "TV Cable", "WiFi"],
-        "featured": true, 
+        "featured": true,
         "priceDollar": {
             "sale": 4500000,
             "rent": null
@@ -307,8 +298,7 @@
         "yearBuilt": 2007,
         "ratingsCount": 6,
         "ratingsValue": 480,
-        "additionalFeatures": [                
-            {
+        "additionalFeatures": [{
                 "name": "Heat",
                 "value": "Natural Gas"
             },
@@ -341,8 +331,7 @@
                 "value": "2"
             }
         ],
-        "gallery": [
-            {
+        "gallery": [{
                 "small": "assets/images/props/house-3/1-small.jpg",
                 "medium": "assets/images/props/house-3/1-medium.jpg",
                 "big": "assets/images/props/house-3/1-big.jpg"
@@ -363,8 +352,7 @@
                 "big": "assets/images/props/house-3/4-big.jpg"
             }
         ],
-        "plans": [
-            {
+        "plans": [{
                 "name": "First floor",
                 "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
                 "area": {
@@ -387,8 +375,7 @@
                 "image": "assets/images/others/plan-2.jpg"
             }
         ],
-        "videos": [
-            {
+        "videos": [{
                 "name": "Video",
                 "link": "http://themeseason.com/data/videos/video-1.mp4"
             },
@@ -403,21 +390,21 @@
     },
     {
         "id": 6,
-        "title": "Bright and sunny house", 
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+        "title": "Bright and sunny house",
+        "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "House",
         "propertyStatus": ["For Rent", "No Fees"],
         "city": "Chicago",
         "zipCode": "60609",
         "neighborhood": ["Englewood", "Austin"],
         "street": ["Englewood Street #2", "Austin Street #2"],
-        "location" : {
+        "location": {
             "lat": 41.814080,
             "lng": -87.660410
         },
-        "formattedAddress": "1400 W 44th St, Chicago, IL 60609, USA", 
+        "formattedAddress": "1400 W 44th St, Chicago, IL 60609, USA",
         "features": ["Refrigerator", "Barbeque", "Dryer", "Microwave", "Gym", "Swimming Pool", "Sauna", "TV Cable", "WiFi"],
-        "featured": true, 
+        "featured": true,
         "priceDollar": {
             "sale": null,
             "rent": 9000
@@ -436,8 +423,7 @@
         "yearBuilt": 2017,
         "ratingsCount": 5,
         "ratingsValue": 400,
-        "additionalFeatures": [                
-            {
+        "additionalFeatures": [{
                 "name": "Heat",
                 "value": "Natural Gas"
             },
@@ -470,8 +456,7 @@
                 "value": "2"
             }
         ],
-        "gallery": [
-            {
+        "gallery": [{
                 "small": "assets/images/props/house-2/1-small.jpg",
                 "medium": "assets/images/props/house-2/1-medium.jpg",
                 "big": "assets/images/props/house-2/1-big.jpg"
@@ -492,8 +477,7 @@
                 "big": "assets/images/props/house-2/4-big.jpg"
             }
         ],
-        "plans": [
-            {
+        "plans": [{
                 "name": "First floor",
                 "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
                 "area": {
@@ -516,8 +500,7 @@
                 "image": "assets/images/others/plan-2.jpg"
             }
         ],
-        "videos": [
-            {
+        "videos": [{
                 "name": "Video",
                 "link": "http://themeseason.com/data/videos/video-1.mp4"
             },
@@ -532,21 +515,21 @@
     },
     {
         "id": 8,
-        "title": "Centrally located apartment", 
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
+        "title": "Centrally located apartment",
+        "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Apartment",
         "propertyStatus": ["For Rent", "No Fees"],
         "city": "Los Angeles",
         "zipCode": "90028",
         "neighborhood": ["Englewood", "Austin"],
         "street": ["Englewood Street #2", "Austin Street #2"],
-        "location" : {
+        "location": {
             "lat": 34.100570,
             "lng": -118.327440
         },
-        "formattedAddress": "1627 Vine St, Los Angeles, CA 90028, USA", 
+        "formattedAddress": "1627 Vine St, Los Angeles, CA 90028, USA",
         "features": ["Air Conditioning", "Refrigerator", "Dryer", "Microwave", "Gym", "Swimming Pool", "Sauna", "TV Cable", "WiFi"],
-        "featured": true, 
+        "featured": true,
         "priceDollar": {
             "sale": null,
             "rent": 5600
@@ -565,8 +548,7 @@
         "yearBuilt": 2017,
         "ratingsCount": 4,
         "ratingsValue": 380,
-        "additionalFeatures": [                
-            {
+        "additionalFeatures": [{
                 "name": "Heat",
                 "value": "Natural Gas"
             },
@@ -599,8 +581,7 @@
                 "value": "2"
             }
         ],
-        "gallery": [
-            {
+        "gallery": [{
                 "small": "assets/images/props/apartment/1-small.jpg",
                 "medium": "assets/images/props/apartment/1-medium.jpg",
                 "big": "assets/images/props/apartment/1-big.jpg"
@@ -626,8 +607,7 @@
                 "big": "assets/images/props/apartment/5-big.jpg"
             }
         ],
-        "plans": [
-            {
+        "plans": [{
                 "name": "First floor",
                 "desc": "Plan description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam veniam sit reprehenderit deserunt ad voluptates id aperiam veritatis! Nobis saepe quos eveniet numquam vitae quis, tenetur consectetur impedit dolore.",
                 "area": {
@@ -650,8 +630,7 @@
                 "image": "assets/images/others/plan-2.jpg"
             }
         ],
-        "videos": [
-            {
+        "videos": [{
                 "name": "Video",
                 "link": "http://themeseason.com/data/videos/video-1.mp4"
             },
@@ -663,5 +642,5 @@
         "published": "2016-03-29 05:20:00",
         "lastUpdate": "2019-06-26 14:20:00",
         "views": 852
-    }    
+    }
 ]
