@@ -1,7 +1,10 @@
+import { ChooseAppSettingsModalComponent } from './../core/auth/components/choose-app-settings-modal/choose-app-settings-modal.component';
+import { MatDialog } from '@angular/material/dialog';
 import { isPlatformBrowser } from '@angular/common';
 import { Component, OnInit, ViewChild, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Settings, AppSettings } from '../app.settings';
+import { packsDataSampleDoctor } from '../mock-data/constants';
 
 @Component({
   selector: 'app-pages',
@@ -9,123 +12,148 @@ import { Settings, AppSettings } from '../app.settings';
   styleUrls: ['./pages.component.scss']
 })
 export class PagesComponent implements OnInit {
-  @ViewChild('sidenav') sidenav:any;  
+  @ViewChild('sidenav') sidenav: any;
   public toolbarTypes = [1, 2];
-  public toolbarTypeOption:number;
+  public toolbarTypeOption: number;
   public headerTypes = ['default', 'image', 'carousel', 'map', 'video'];
-  public headerTypeOption:string;
+  public headerTypeOption: string;
   public searchPanelVariants = [1, 2, 3];
-  public searchPanelVariantOption:number;
+  public searchPanelVariantOption: number;
   public headerFixed: boolean = false;
   public showBackToTop: boolean = false;
   public scrolledCount = 0;
 
   public settings: Settings;
-  constructor(public appSettings:AppSettings, public router:Router, @Inject(PLATFORM_ID) private platformId: Object) {
-    this.settings = this.appSettings.settings;  
+  constructor(
+    public appSettings: AppSettings,
+    public router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public dialog: MatDialog
+  ) {
+    this.settings = this.appSettings.settings;
   }
 
   ngOnInit() {
-    this.toolbarTypeOption = this.settings.toolbar;    
-    this.headerTypeOption = this.settings.header; 
+    this.toolbarTypeOption = this.settings.toolbar;
+    this.headerTypeOption = this.settings.header;
     this.searchPanelVariantOption = this.settings.searchPanelVariant;
   }
-  
-  public changeTheme(theme){
-    this.settings.theme = theme;       
+
+  public changeTheme(theme) {
+    this.settings.theme = theme;
   }
 
-  public chooseToolbarType(){
+  public chooseToolbarType() {
     this.settings.toolbar = this.toolbarTypeOption;
     if (isPlatformBrowser(this.platformId)) {
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
     }
   }
 
-  public chooseHeaderType(){
-    this.settings.header = this.headerTypeOption;    
+  public chooseHeaderType() {
+    this.settings.header = this.headerTypeOption;
     if (isPlatformBrowser(this.platformId)) {
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
     }
     this.router.navigate(['/']);
   }
 
-  public chooseSearchPanelVariant(){
+  public chooseSearchPanelVariant() {
     this.settings.searchPanelVariant = this.searchPanelVariantOption;
   }
-     
- 
+
+
   @HostListener('window:scroll') onWindowScroll() {
     const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
-    (scrollTop > 300) ? this.showBackToTop = true : this.showBackToTop = false; 
+    (scrollTop > 300) ? this.showBackToTop = true : this.showBackToTop = false;
 
-    if(this.settings.stickyMenuToolbar){      
+    if (this.settings.stickyMenuToolbar) {
       let top_toolbar = document.getElementById('top-toolbar');
-      if(top_toolbar){ 
-        if(scrollTop >= top_toolbar.clientHeight) {
+      if (top_toolbar) {
+        if (scrollTop >= top_toolbar.clientHeight) {
           this.settings.mainToolbarFixed = true;
         }
-        else{
+        else {
           this.settings.mainToolbarFixed = false;
-        } 
-      }        
-    } 
-    
-        
+        }
+      }
+    }
+
+
     let load_more = document.getElementById('load-more');
-    if(load_more){
-      if(window.innerHeight > load_more.getBoundingClientRect().top + 120){ 
-        if(!this.settings.loadMore.complete){
-          if(this.settings.loadMore.start){        
-            if(this.scrolledCount < this.settings.loadMore.step){  
-              this.scrolledCount++; 
-              if(!this.settings.loadMore.load){ 
-                this.settings.loadMore.load = true; 
+    if (load_more) {
+      if (window.innerHeight > load_more.getBoundingClientRect().top + 120) {
+        if (!this.settings.loadMore.complete) {
+          if (this.settings.loadMore.start) {
+            if (this.scrolledCount < this.settings.loadMore.step) {
+              this.scrolledCount++;
+              if (!this.settings.loadMore.load) {
+                this.settings.loadMore.load = true;
               }
             }
-            else{
+            else {
               this.settings.loadMore.start = false;
               this.scrolledCount = 0;
             }
-          }  
-        }              
+          }
+        }
       }
     }
   }
 
-  public scrollToTop(){
+  public scrollToTop() {
     var scrollDuration = 200;
-    var scrollStep = -window.pageYOffset  / (scrollDuration / 20);
-    var scrollInterval = setInterval(()=>{
-      if(window.pageYOffset != 0){
-         window.scrollBy(0, scrollStep);
+    var scrollStep = -window.pageYOffset / (scrollDuration / 20);
+    var scrollInterval = setInterval(() => {
+      if (window.pageYOffset != 0) {
+        window.scrollBy(0, scrollStep);
       }
-      else{
-        clearInterval(scrollInterval); 
+      else {
+        clearInterval(scrollInterval);
       }
-    },10);
-    if(window.innerWidth <= 768){
-      setTimeout(() => { 
+    }, 10);
+    if (window.innerWidth <= 768) {
+      setTimeout(() => {
         if (isPlatformBrowser(this.platformId)) {
-          window.scrollTo(0,0);
-        } 
+          window.scrollTo(0, 0);
+        }
       });
     }
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {        
+      if (event instanceof NavigationEnd) {
         this.sidenav.close();
         this.settings.mainToolbarFixed = false;
         setTimeout(() => {
           if (isPlatformBrowser(this.platformId)) {
-            window.scrollTo(0,0);
-          } 
-        }); 
-      }            
-    });    
-  }   
- 
+            window.scrollTo(0, 0);
+          }
+        });
+      }
+    });
+  }
+
+  openSettingsDialog(): void {
+    let dialogRef = this.dialog.open(ChooseAppSettingsModalComponent, {
+      hasBackdrop: true,
+      disableClose: false,
+      height: '100vh',
+      minWidth: '90%',
+      position: {
+        right: '0px',
+        bottom: '0px',
+      },
+      data: {
+        pack: packsDataSampleDoctor[0]
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
 
 }
