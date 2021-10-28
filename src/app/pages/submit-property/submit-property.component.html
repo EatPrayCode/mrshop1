@@ -32,12 +32,6 @@
                                 </mat-form-field>
                             </div>
 
-                            <div fxFlex="100" class="px-2 mb-4">
-                                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [mapTypeControl]="true" [fullscreenControl]="true" (mapClick)="onMapClick($event)">
-                                    <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true" (markerClick)="onMarkerClick($event)"></agm-marker>
-                                </agm-map>
-                            </div>
-
                             <div fxFlex="100" fxFlex.gt-xs="50" class="px-2">
                                 <mat-form-field appearance="outline" class="w-100">
                                     <mat-label>City</mat-label>

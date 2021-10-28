@@ -7,7 +7,8 @@ import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common
 import { NgProgressModule } from 'ngx-progressbar';
 import { NgProgressHttpModule } from 'ngx-progressbar/http';
 import { AgmCoreModule } from '@agm/core';
-import { EmbedVideo } from 'ngx-embed-video'; 
+import { EmbedVideo } from 'ngx-embed-video';
+ 
 import { InputFileConfig, InputFileModule } from 'ngx-input-file';
 const config: InputFileConfig = {
   fileAccept: '*'

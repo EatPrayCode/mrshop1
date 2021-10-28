@@ -1,9 +1,9 @@
+import { WindowService } from './../../services/window.service';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import firebase from "firebase/app"
-import { AuthService } from '../../auth.service';
-import { WindowService } from '../../window.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signin-mobile',
@@ -16,7 +16,8 @@ export class SigninMobileComponent implements OnInit, AfterViewInit {
   windowRef: any;
   disableotpsendbtn = true;
 
-  constructor(private windowService: WindowService,
+  constructor(
+    private windowService: WindowService,
     private afAuth: AngularFireAuth,
     private authservice: AuthService,
     private router: Router) { }

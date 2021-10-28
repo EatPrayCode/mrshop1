@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 import { AppResolver } from './app.resolver';
 import { Injectable } from "@angular/core";
 import { StateService } from './state.service';
-import { AuthService } from 'src/app/core/auth/auth.service';
+import { AuthService } from 'src/app/core/auth/services/auth.service';
 import { AuthGuard } from 'src/app/core/auth/guards/auth.guard';
 
 @Injectable({

@@ -1,5 +1,5 @@
 import { take } from 'rxjs/operators';
-import { FirebaseApiService } from '../firebase-api.service';
+import { FirebaseApiService } from '../../firebase/firebase-api.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Injectable } from '@angular/core';
 import firebase from "firebase/app"

@@ -12,7 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { Router } from '@angular/router';
 import { Property } from './app.models';
-import { AuthService } from './core/auth/auth.service';
+import { AuthService } from './core/auth/services/auth.service';
 import { AuthGuard } from './core/auth/guards/auth.guard';
 import { Category, Product } from './mock-data/app.models';
 import { mockPackProduct1 } from './mock-data/mockJsonPacks';
