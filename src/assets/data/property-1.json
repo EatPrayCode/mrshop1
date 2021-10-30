@@ -1,38 +1,38 @@
 {
-    "id": 1,
-    "title": "Modern and quirky flat",
+    "id": 2,
+    "title": "Centrally located office",
     "desc": "Lorem ipsum dolor sit amet consectetur.",
-    "propertyType": "Apartment",
-    "propertyStatus": ["For Sale"],
-    "city": "New York",
-    "zipCode": "10033",
-    "neighborhood": ["Astoria", "Midtown"],
-    "street": ["Astoria Street #1", "Midtown Street #2"],
+    "propertyType": "Office",
+    "propertyStatus": ["For Rent", "No Fees"],
+    "city": "Los Angeles",
+    "zipCode": "90044",
+    "neighborhood": ["Hollywood", "Highland Park"],
+    "street": ["Hollywood Street #2", "Highland Park Street #1"],
     "location": {
-        "lat": 40.849150,
-        "lng": -73.935100
+        "lat": 33.954220,
+        "lng": -118.293730
     },
-    "formattedAddress": "Pack Description this long and more",
-    "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Swimming Pool", "TV Cable", "WiFi"],
+    "formattedAddress": "1052 W 91st St, Los Angeles, CA 90044, USA",
+    "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
     "featured": true,
     "priceDollar": {
-        "sale": 1300000,
-        "rent": null
+        "sale": null,
+        "rent": 6500
     },
     "priceEuro": {
-        "sale": 1160000,
-        "rent": null
+        "sale": null,
+        "rent": 5800
     },
-    "bedrooms": 2,
+    "bedrooms": 4,
     "bathrooms": 2,
-    "garages": 1,
+    "garages": 2,
     "area": {
-        "value": 2380,
+        "value": 1500,
         "unit": "ft²"
     },
-    "yearBuilt": 2007,
-    "ratingsCount": 3,
-    "ratingsValue": 280,
+    "yearBuilt": 2012,
+    "ratingsCount": 4,
+    "ratingsValue": 400,
     "additionalFeatures": [{
             "name": "Heat",
             "value": "Natural Gas"
@@ -67,24 +67,34 @@
         }
     ],
     "gallery": [{
-            "small": "assets/images/props/flat-1/1-small.jpg",
-            "medium": "assets/images/props/flat-1/1-medium.jpg",
-            "big": "assets/images/props/flat-1/1-big.jpg"
+            "small": "assets/images/props/office/1-small.jpg",
+            "medium": "assets/images/props/office/1-medium.jpg",
+            "big": "assets/images/props/office/1-big.jpg"
         },
         {
-            "small": "assets/images/props/flat-1/2-small.jpg",
-            "medium": "assets/images/props/flat-1/2-medium.jpg",
-            "big": "assets/images/props/flat-1/2-big.jpg"
+            "small": "assets/images/props/office/2-small.jpg",
+            "medium": "assets/images/props/office/2-medium.jpg",
+            "big": "assets/images/props/office/2-big.jpg"
         },
         {
-            "small": "assets/images/props/flat-1/3-small.jpg",
-            "medium": "assets/images/props/flat-1/3-medium.jpg",
-            "big": "assets/images/props/flat-1/3-big.jpg"
+            "small": "assets/images/props/office/3-small.jpg",
+            "medium": "assets/images/props/office/3-medium.jpg",
+            "big": "assets/images/props/office/3-big.jpg"
         },
         {
-            "small": "assets/images/props/flat-1/4-small.jpg",
-            "medium": "assets/images/props/flat-1/4-medium.jpg",
-            "big": "assets/images/props/flat-1/4-big.jpg"
+            "small": "assets/images/props/office/4-small.jpg",
+            "medium": "assets/images/props/office/4-medium.jpg",
+            "big": "assets/images/props/office/4-big.jpg"
+        },
+        {
+            "small": "assets/images/props/office/5-small.jpg",
+            "medium": "assets/images/props/office/5-medium.jpg",
+            "big": "assets/images/props/office/5-big.jpg"
+        },
+        {
+            "small": "assets/images/props/office/6-small.jpg",
+            "medium": "assets/images/props/office/6-medium.jpg",
+            "big": "assets/images/props/office/6-big.jpg"
         }
     ],
     "plans": [{
@@ -119,7 +129,7 @@
             "link": "https://www.youtube.com/watch?v=-NInBEdSvp8"
         }
     ],
-    "published": "2012-08-12 17:17:30",
+    "published": "2013-09-12 12:20:30",
     "lastUpdate": "2019-05-20 14:20:00",
-    "views": 322
+    "views": 408
 }
