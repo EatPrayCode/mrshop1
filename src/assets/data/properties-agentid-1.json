@@ -12,7 +12,7 @@
         "lat": 33.954220,
         "lng": -118.293730
     },
-    "formattedAddress": "1052 W 91st St, Los Angeles, CA 90044, USA",
+    "formattedAddress": "1052 91st St, Los Angeles, CA 90044",
     "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
     "featured": true,
     "priceDollar": {
