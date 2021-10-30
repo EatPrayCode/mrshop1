@@ -91,7 +91,8 @@
     min-height: 70vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    height: 92%;
 }
 
 .layout-inner-container .content-layout-container .left-layout-container .left-nav-list a {
