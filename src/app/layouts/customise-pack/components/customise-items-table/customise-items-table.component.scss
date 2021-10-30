@@ -1,14 +1,19 @@
 .main-container {
     height: 65vh;
-    border: 2px solid pink;
+    // border: 2px solid rgba(95, 95, 95, 0.5);
     position: relative;
+    padding: 2px;
 }
-
+.align-center{
+    align-self: center;
+}
 .main-header {
-    border: 2px solid orange;
+    border: 2px solid rgba(75, 75, 75, 0.253);
     position: sticky;
     top: 0px;
     height: 50px;
+    margin: 0 2px;
+    border-radius: 4px;
 }
 
 .bottom-navigation {
@@ -21,15 +26,17 @@
 
 .main-content {
     position: relative;
-    border: 2px solid yellow;
     overflow-y: scroll;
     top: 0px;
     height: 75%;
     width: 100%;
+    border-radius: 4px;
+    margin-top: 5px;
+    border: 2px solid rgba(38, 39, 38, 0.527);
 }
 
 .main-footer {
-    border: 2px solid green;
+    border: 2px solid rgb(22, 22, 22);
     width: 100%;
 }
 
@@ -358,5 +365,6 @@ $screen-md-max: ($screen-lg-min - 1);
 }
 
 .pack-container {
-    border: 2px solid green;
+    border: 1px solid rgba(77, 77, 77, 0.705);
+    border-radius: 4px;
 }

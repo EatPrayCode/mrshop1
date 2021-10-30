@@ -65,18 +65,24 @@
                                      </div>
                                  </strong>
                                 <sub class="row">
-                                <div class="col-6">
-                                    <input formControlName="pricePerItem" />
-                                    <mat-form-field>
-                                        <mat-select (ngModelChange)="changeQuantity($event, i)" formControlName="quantity" placeholder="Quantity">
-                                        <mat-option *ngFor="
-                                        let quantity of (form.controls.items?.value)[i]
-                                        .quantityList
-                                        " [value]="quantity">
-                                        {{ quantity.value }}
-                                        </mat-option>
-                                        </mat-select>
-                                    </mat-form-field>
+                                <div class="col-12 row">
+                                    <div class="col-6 center-align">
+
+                                        <input formControlName="pricePerItem" />
+                                    </div>
+                                    <div class="col-6">
+
+                                        <mat-form-field>
+                                            <mat-select (ngModelChange)="changeQuantity($event, i)" formControlName="quantity" placeholder="Quantity">
+                                            <mat-option *ngFor="
+                                            let quantity of (form.controls.items?.value)[i]
+                                            .quantityList
+                                            " [value]="quantity">
+                                            {{ quantity.value }}
+                                            </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
 
                                 </div>
 
@@ -89,7 +95,7 @@
                                 <strong>                         </strong>
                             </div>
                         </div>
-                        <div class="c-flight-card__price" xs-order="5">
+                        <div class="c-flight-card__price  center-align" xs-order="5">
                             <strong>
                                 <mat-icon>mic</mat-icon>
                                 <mat-icon>edit</mat-icon>
