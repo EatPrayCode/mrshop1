@@ -66,6 +66,7 @@
                 <div class="features">
                     <p class="features-row"><span>Property size</span><span>{{property?.area.value}} {{property?.area.unit}}</span></p>
                     <p class="features-row"><span>Garages</span><span>{{property?.garages}}</span></p>
+                    <p class="features-row"><span>Garages</span><span>{{property?.garages}}</span></p>
                 </div>
 
             </mat-card-content>
@@ -73,6 +74,9 @@
             <mat-card-actions class="m-0 p-0" fxLayoutAlign="space-between center">
                 <div>
                     <a [routerLink]="['/properties', property?.id]" mat-stroked-button color="primary" class="uppercase">Details</a>
+                </div>
+                <div>
+                    <a [routerLink]="['/properties', property?.id]" mat-stroked-button color="primary" class="uppercase">Savings</a>
                 </div>
                 <div>
                     <a [routerLink]="['/properties', property?.id]" mat-mini-fab color="primary" class="uppercase">
