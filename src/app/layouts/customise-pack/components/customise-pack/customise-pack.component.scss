@@ -7,7 +7,15 @@
     border: 2px solid pink;
     position: relative;
 }
-
+input{
+    width: 100%;
+}
+.mat-form-field{
+    width: 100%;
+}
+.center-align{
+    align-self: center;
+}
 .main-header {
     border: 2px solid orange;
     position: sticky;
@@ -315,7 +323,7 @@ $screen-md-max: ($screen-lg-min - 1);
         @media screen and (min-width: $screen-sm-min) {
             padding: 5px;
             text-align: center;
-            width: 140px;
+            // width: 140px;
         }
     }
     .c-flight-card__stops {
