@@ -1,7 +1,7 @@
 .layout-inner-container .content-layout-container .right-layout-container a {
     // text-align: center;
     width: 33.33%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -9,7 +9,7 @@
 }
 
 .layout-inner-container .content-layout-container .right-layout-container a .img-container {
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
     width: 100%;
     height: auto;
 }
@@ -17,74 +17,87 @@
 .layout-inner-container .content-layout-container .right-layout-container a .img-container img {
     width: 100%;
     border-radius: 4px 4px 0 0;
-    height: 170px;
+    // height: 130px;
 }
-.text-span{
-    font-size: 12px;
+
+.text-span {
+    font-size: 0.65rem;
 }
 
 @media screen and (max-width: 541px) {
     .layout-inner-container .content-layout-container .right-layout-container a .img-container img {
         width: 100%;
-        height: 90px;
+        // height: 75px;
         border-radius: 0;
     }
-    .menu-icon{
-        font-size: 12px;
+    .menu-icon {
+        font-size: 0.65rem;
     }
-    .text-span{
-        font-size: 10px;
+    .text-span {
+        font-size: 0.65rem;
     }
-    
 }
 
 .layout-inner-container .content-layout-container .right-layout-container a span {
     // text-align: center;
-    width: 70px;
+    // width: 70px;
     // font-size: 12px;
     font-weight: 600;
 }
-.pack-info-container{
+
+.pack-info-container {
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
     padding: 0 4px;
 }
-.flex-row{
+
+.flex-row {
     display: flex;
     flex-direction: row;
 }
-.flex-column{
+
+.flex-column {
     display: flex;
     flex-direction: column;
 }
-.menu-icon{
+
+.menu-icon {
     cursor: pointer;
 }
-.pack-card{
+
+.pack-card {
     // margin: 1px;
 }
-.sub-menu-option-container{
+
+.sub-menu-option-container {
     width: 100%;
     justify-content: space-between;
     align-items: center;
     margin-top: 5px;
 }
-.card-sub-container{
+
+.card-sub-container {
     width: 96%;
-    padding-bottom: 5px;
-    border-radius: 4px;
+    padding-bottom: 1px;
+    border-radius: 1px;
     border: 1px solid grey;
     box-shadow: 1px 1px 3px 1px #c9c9c9;
 }
-.pack-info{
+
+.pack-info {
     width: 100%;
     text-align: left;
-    white-space: nowrap;  
-    overflow: hidden;
-    text-overflow: ellipsis; 
+    white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
 }
-.mat-icon{
+
+.mat-icon {
     width: auto;
     height: auto;
+}
+
+.pack-description {
+    font-size: 0.55rem;
 }

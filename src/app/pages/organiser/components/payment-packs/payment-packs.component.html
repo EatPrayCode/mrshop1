@@ -1,73 +1,69 @@
 <div class="layout-container">
-  <section class="layout-inner-container">
-    <div class="tool-bar-row">
-      <div class="search-row">
-        <i class="clear"></i>
-        <div class="search-container">
-          <i class="search"></i>
-          <input type="text" placeholder="Search Here" />
-        </div>
-      </div>
-    </div>
-    <div class="content-layout-container">
-      <div class="left-layout-container">
-        <div class="left-nav-list">
-          <a class="left-layout-nav-item">
-            <span>Recharge &amp; Pay Bills</span>
-          </a>
-          <a class="">
-            <span>Online Shopping</span>
-          </a>
-          <a class="">
-            <span>Travel</span>
-          </a>
-          <a class="">
-            <span>Movies &amp; Events</span>
-          </a>
-          <a class="">
-            <span>Stocks &amp; Wealth</span>
-          </a>
-          <a class="">
-            <span>Loans &amp; Credit Card</span>
-          </a>
-          <a class="">
-            <span>Other Services</span>
-          </a>
-        </div>
-      </div>
-      <div class="right-layout-container">
-        <a *ngFor="let product of rightList" class="pack-card">
-          <div class="card-sub-container">
-            <div class="img-container">
-              <img
-                src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Mini/Cooper-Convertible/5182/1624430518066/front-left-side-47.jpg?tr=w-375"
-                alt="Name"
-              />
+    <section class="layout-inner-container">
+        <div class="tool-bar-row">
+            <div class="search-row">
+                <i class="clear"></i>
+                <div class="search-container">
+                    <i class="search"></i>
+                    <input type="text" placeholder="Search Here" />
+                </div>
             </div>
-            <div class="pack-info-container flex-column">
-              <div class="pack-info  flex-row">
-                <span class="text-span"> Pack name is </span>
-              </div>
-              <div class="pack-info flex-row">
-                <span  class="text-span"> Description </span>
-              </div>
-              <div class="sub-menu-option-container flex-row">
-                <mat-icon class="menu-icon" [matMenuTriggerFor]="menu"
-                  >more_vert</mat-icon
-                >
-                <mat-icon class="menu-icon">settings</mat-icon>
-                <mat-icon class="menu-icon">settings</mat-icon>
+        </div>
+        <div class="content-layout-container">
+            <div class="left-layout-container">
+                <div class="left-nav-list">
+                    <a class="left-layout-nav-item">
+                        <span>Recharge &amp; Pay Bills</span>
+                    </a>
+                    <a class="">
+                        <span>Online Shopping</span>
+                    </a>
+                    <a class="">
+                        <span>Travel</span>
+                    </a>
+                    <a class="">
+                        <span>Movies &amp; Events</span>
+                    </a>
+                    <a class="">
+                        <span>Stocks &amp; Wealth</span>
+                    </a>
+                    <a class="">
+                        <span>Loans &amp; Credit Card</span>
+                    </a>
+                    <a class="">
+                        <span>Other Services</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right-layout-container">
+                <a *ngFor="let product of rightList" class="pack-card">
+                    <div class="card-sub-container">
+                        <div class="img-container">
+                            <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Mini/Cooper-Convertible/5182/1624430518066/front-left-side-47.jpg?tr=w-375" alt="Name" />
+                        </div>
+                        <div class="pack-info-container flex-column">
+                            <div class="pack-info  flex-row">
+                                <span class="text-span"> Organise Baby Pack </span>
+                            </div>
+                            <!-- <div class="pack-info flex-row pack-description">
+                                <p class="text-span"> Organise Baby Pack.</p>
+                            </div> -->
+                            <div class="sub-menu-option-container flex-row">
 
-                <mat-menu #menu="matMenu">
-                  <button mat-menu-item>Add to Box</button>
-                  <button mat-menu-item>Organise this</button>
-                  <button mat-menu-item>Choose best for my budget</button>
-                </mat-menu>
-              </div>
+                                <mat-icon class="menu-icon">settings</mat-icon>
+                                <mat-icon class="menu-icon">settings</mat-icon>
+                                <mat-icon class="menu-icon" [matMenuTriggerFor]="menu">more_vert</mat-icon>
+
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>Add to Box</button>
+                                    <button mat-menu-item>Organise this</button>
+                                    <button mat-menu-item>Choose best for my budget</button>
+                                </mat-menu>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+        </div>
+    </section>
 </div>
