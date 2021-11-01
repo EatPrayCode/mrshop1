@@ -1,8 +1,6 @@
 .main-container {
     height: 65vh;
-    // border: 2px solid rgba(95, 95, 95, 0.5);
     position: relative;
-    padding: 2px;
 }
 
 .align-center {
@@ -14,7 +12,8 @@
     position: sticky;
     top: 0px;
     height: 10%;
-    margin: 0 2px;
+    margin: 2px 2px 0px 2px;
+    padding: 0px 0px 0px 0px;
     border-radius: 4px;
 }
 
@@ -33,7 +32,7 @@
     height: 91%;
     width: 100%;
     border-radius: 4px;
-    margin-top: 5px;
+    margin-top: 2px;
     border: 2px solid rgba(38, 39, 38, 0.527);
 }
 
@@ -274,7 +273,7 @@ $screen-md-max: ($screen-lg-min - 1);
         }
     }
     .c-card__body {
-        padding: 0 0 0 10px;
+        padding: 0 0 0 0px;
         @media screen and (min-width: $screen-sm-min) {
             align-items: stretch;
             padding: 0;

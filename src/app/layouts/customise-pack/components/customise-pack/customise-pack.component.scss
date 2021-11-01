@@ -1,66 +1,57 @@
-// .mat-dialog-container {
-//     padding: 0px;
-// }
+.main-container {
+    height: 89%;
+}
 
-// .main-container {
-//     height: 90vh;
-//     border: 2px solid pink;
-//     position: relative;
-// }
-// input{
-//     width: 100%;
-// }
-// .mat-form-field{
-//     width: 100%;
-// }
-// .center-align{
-//     align-self: center;
-// }
-.main-container{
-    height: 75%;
-}
 .checkbox-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
+
 .align-self-center {
-  align-self: center;
+    align-self: center;
 }
+
 .align-center {
-  align-items: center;
+    align-items: center;
 }
+
 .mat-form-field {
-  width: 100%;
+    width: 100%;
 }
+
 input {
-  width: 100%;
+    width: 100%;
 }
+
 .pack-item-wrapper {
-  padding: 4px 0;
-  border: 1px solid rgba(73, 72, 72, 0.301);
-  margin: 7px 0;
-  border-radius: 4px;
-  box-shadow: 8px 1px 2px 1px #808080b5;
+    padding: 4px 4px 4px 4px;
+    border: 2px solid rgba(73, 72, 72, 0.301);
+    margin: 4px 4px 4px 4px;
+    border-radius: 4px;
+    box-shadow: 4px 1px 2px 1px #808080b5
 }
+
 .pack-item-wrapper:hover {
-  border: 1px solid rgba(73, 72, 72, 0.301);
-  margin: 7px 0;
-  box-shadow: 0px 0px 3px 3px #808080b5;
+    border: 1px solid rgba(73, 72, 72, 0.301);
+    box-shadow: 0px 0px 3px 3px #808080b5;
 }
+
 .main-header {
-  border-bottom: 2px solid rgb(95, 95, 95);
-  position: sticky;
-  top: 0px;
-  height: 50px;
-  z-index: 1000;
-  background-color: white;
+    border-bottom: 2px solid rgb(95, 95, 95);
+    position: sticky;
+    top: 0px;
+    height: 50px;
+    z-index: 1000;
+    background-color: white;
 }
-.description-info{
+
+.description-info {
     font-size: 70%;
 }
-.footer-container{
+
+.footer-container {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -69,7 +60,8 @@ input {
     // bottom: 0;
     height: calc(25% - 45px);
 }
-form{
+
+form {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -83,23 +75,27 @@ form{
     border: 2px solid red;
     width: 100%;
 }
+
 .image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 17px;
 }
+
 .block-type {
-  display: block;
+    display: block;
 }
+
 .main-content {
-  position: relative;
-  overflow-y: scroll;
-  top: 0px;
-  height: calc(100% - 50px);
-  width: 100%;
+    position: relative;
+    overflow-y: scroll;
+    top: 0px;
+    height: calc(100% - 50px);
+    width: 100%;
 }
-.main-footer{
+
+.main-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -110,7 +106,6 @@ form{
 //     border: 2px solid green;
 //     width: 100%;
 // }
-
 // //== Media queries breakpoints
 // //
 // // ## NOTE: Bootstrap media queries definitions. Keep in sync with any bootstrap changes. It could be
@@ -149,7 +144,6 @@ form{
 // * {
 //     box-sizing: border-box;
 // }
-
 // /*!
 // *
 // *  Responsive attributes
@@ -163,94 +157,72 @@ form{
 // *
 // *
 // */
-
 // [layout] {
 //     display: flex;
 // }
-
 // [layout="row"],
 // [layout="row nowrap"] {
 //     flex-flow: row nowrap;
 // }
-
 // [layout="row wrap"] {
 //     flex-flow: row wrap;
 // }
-
 // [layout="row-reverse"] [layout="row-reverse nowrap"] {
 //     flex-flow: row-reverse nowrap;
 // }
-
 // [layout="row-reverse wrap"] {
 //     flex-flow: row-reverse wrap;
 // }
-
 // [layout="column"],
 // [layout="column nowrap"] {
 //     flex-flow: column nowrap;
 // }
-
 // [layout="column wrap"] {
 //     flex-flow: column wrap;
 // }
-
 // [layout="column-reverse"],
 // [layout="column-reverse nowrap"] {
 //     flex-direction: column-reverse;
 // }
-
 // [layout="column-reverse wrap"] {
 //     flex-flow: column-reverse wrap;
 // }
-
 // [flex] {
 //     flex: 1 1 0;
 // }
-
 // [flex="auto"] {
 //     flex: 1 1 auto;
 // }
-
 // [flex="grow"] {
 //     flex: 1 1 100%;
 // }
-
 // [flex="nogrow"] {
 //     flex: 0 1 auto;
 // }
-
 // [flex="noshrink"] {
 //     flex: 1 0 auto;
 // }
-
 // [flex="none"] {
 //     flex: 0 0 auto;
 // }
-
 // [layout-align="space-around"] {
 //     justify-content: space-around;
 // }
-
 // [order="1"] {
 //     order: 1;
 // }
-
 // [order="2"] {
 //     order: 2;
 // }
-
 // [order="3"] {
 //     order: 3;
 // }
-
 // [order="4"] {
 //     order: 4;
 // }
-
 // [order="5"] {
 //     order: 5;
 // }
-
 // @media screen and (max-width: #{$screen-sm-min - 1px}) {
 //     [xs-layout] {
 //         display: flex;
@@ -316,7 +288,6 @@ form{
 //         order: 5;
 //     }
 // }
-
 // .c-card {
 //     align-items: stretch;
 //     margin: 5px;
@@ -334,13 +305,14 @@ form{
 //         @media screen and (min-width: $screen-sm-min) {}
 //     }
 .c-card__image {
-  width: 50px;
-  transition: all 0.5s;
-  @media screen and (max-width: 540px) {
-    padding: 5px;
-    width: 40px;
-  }
+    width: 50px;
+    transition: all 0.5s;
+    @media screen and (max-width: 540px) {
+        padding: 5px;
+        width: 40px;
+    }
 }
+
 //     .c-card__body {
 //         // padding: 0 0 0 10px;
 //         @media screen and (min-width: $screen-sm-min) {
@@ -352,7 +324,6 @@ form{
 //         padding: 0;
 //     }
 // }
-
 // .c-flight-card {
 //     $icon-size: 32px;
 //     $icon-padding: 8px;
@@ -433,7 +404,6 @@ form{
 //         }
 //     }
 // }
-
 // .pack-item-container {
 //     border: 2px solid green;
 // }
