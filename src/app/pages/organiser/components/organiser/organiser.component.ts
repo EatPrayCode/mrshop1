@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-payment-packs',
-  templateUrl: './payment-packs.component.html',
-  styleUrls: ['./payment-packs.component.scss']
+  selector: 'app-organiser',
+  templateUrl: './organiser.component.html',
+  styleUrls: ['./organiser.component.scss']
 })
-export class PaymentPacksComponent implements OnInit {
+export class OrganiserComponent implements OnInit {
 
   rightList: any = [{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {}];
 

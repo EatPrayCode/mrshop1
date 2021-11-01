@@ -142,11 +142,11 @@ const packSizes = [
 ];
 
 const json1: any = {
-    "items": [item1, item2, item3]
+    "items": [item1, item2, item3, item1, item2, item3, item1, item2, item3, item1, item2, item3]
 };
 
 const json2: any = {
-    "items": [item1, item3]
+    "items": [item1, item2, item3,  item1, item2]
 };
 
 const packTemplates = [{

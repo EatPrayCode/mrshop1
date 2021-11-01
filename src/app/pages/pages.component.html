@@ -103,13 +103,11 @@
 
 </mat-sidenav-container>
 
-<nav class="navbar navbar-expand-lg fixed-bottom">
+<nav class="navbar navbar-expand-lg fixed-bottom" id="bottom-navbar ">
     <div class="container-fluid">
-        <a [routerLink]="['properties']"><i class="fa fa-fw fa-search"></i> Buy</a>
-        <a [routerLink]="['organiser']"><i class="fa fa-fw fa-envelope"></i> Set</a>
-        <a [routerLink]="['payment-packs']"><i class="fa fa-fw fa-search"></i> Pay</a>
-        <a [routerLink]="['investment-packs']"><i class="fa fa-fw fa-user"></i> Grow</a>
-        <a (click)="openSettingsDialog()"><i class="fa fa-fw fa-cog"></i></a>
+        <span style="color: white;">
+            Summary Comes Here
+        </span>
     </div>
     <div class="container-fluid">
         <a [routerLink]="['properties']"><i class="fa fa-fw fa-search"></i> Buy</a>

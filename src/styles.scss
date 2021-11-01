@@ -10,6 +10,14 @@
 @import "app/theme/styles/spaces";
 @import "app/theme/styles/theme";
 @import "app/theme/styles/rtl";
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -17,8 +25,6 @@
 .layout-container {
     margin: 0;
     height: 100%;
-    border: 2px solid blue;
-    // top: 20px;
 }
 
 .layout-inner-container {
@@ -131,5 +137,4 @@
     right: -2px;
     width: 70%;
     height: 76%;
-    border: 2px solid pink;
 }
