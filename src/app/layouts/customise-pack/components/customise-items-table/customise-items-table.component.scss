@@ -4,14 +4,16 @@
     position: relative;
     padding: 2px;
 }
-.align-center{
+
+.align-center {
     align-self: center;
 }
+
 .main-header {
     border: 2px solid rgba(75, 75, 75, 0.253);
     position: sticky;
     top: 0px;
-    height: 50px;
+    height: 10%;
     margin: 0 2px;
     border-radius: 4px;
 }
@@ -28,7 +30,7 @@
     position: relative;
     overflow-y: scroll;
     top: 0px;
-    height: 75%;
+    height: 91%;
     width: 100%;
     border-radius: 4px;
     margin-top: 5px;
@@ -249,7 +251,7 @@ $screen-md-max: ($screen-lg-min - 1);
 
 .c-card {
     align-items: stretch;
-    margin: 5px;
+    margin: 2px;
     &.c-card--external {
         .c-card__title {
             align-items: center;

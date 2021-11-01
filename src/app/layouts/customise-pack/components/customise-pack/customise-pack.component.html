@@ -1,211 +1,135 @@
 <form class="container-fluid" [formGroup]="form">
-  <div class="main-container">
-    <div class="row main-header">
-      <div class="col-6">
-        <mat-form-field>
-          <mat-select
-            (ngModelChange)="changePackTemplate($event)"
-            formControlName="packTemplate"
-            placeholder="Pack Template"
-          >
-            <mat-option
-              *ngFor="let packTemplate of form.controls.packTemplates?.value"
-              [value]="packTemplate"
-            >
-              {{ packTemplate.name }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div class="col-6">
-        <mat-form-field>
-          <mat-select
-            (ngModelChange)="changePackSize($event)"
-            placeholder="Pack Size"
-            formControlName="packSize"
-          >
-            <mat-option
-              *ngFor="let size of form.controls.packSizes?.value"
-              [value]="size"
-            >
-              {{ size.name }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-    </div>
-    <div class="main-content">
-      <div
-        formArrayName="items"
-        class="pack-item-wrapper"
-        *ngFor="
+    <div class="main-container">
+        <div class="row main-header">
+            <div class="col-6">
+                <mat-form-field>
+                    <mat-select (ngModelChange)="changePackTemplate($event)" formControlName="packTemplate" placeholder="Pack Template">
+                        <mat-option *ngFor="let packTemplate of form.controls.packTemplates?.value" [value]="packTemplate">
+                            {{ packTemplate.name }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <mat-select (ngModelChange)="changePackSize($event)" placeholder="Pack Size" formControlName="packSize">
+                        <mat-option *ngFor="let size of form.controls.packSizes?.value" [value]="size">
+                            {{ size.name }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="main-content">
+            <div formArrayName="items" class="pack-item-wrapper" *ngFor="
           let items of form.controls.items?.value;
           let i = index;
           trackBy: trackFn
-        "
-      >
-        <article
-          [formGroupName]="i"
-          class="flex-row"
-          class="
+        ">
+                <article [formGroupName]="i" class="flex-row" class="
             pack-item-container
             c-card c-card--external c-card--flight
             c-flight-card
-          "
-          layout="row"
-        >
-          <div
-            class="c-card__body"
-            layout="row nowrap"
-            xs-layout="row wrap"
-            flex
-          >
-            <div
-              (click)="openViewEditPackDialog(task)"
-              class="c-flight-card__flight-schedule container-fluid"
-              flex="auto"
-              xs-order="1"
-            >
-              <div class="row">
-                <div class="row col-md-7">
-                  <div
-                    class="
+          " layout="row">
+                    <div class="c-card__body" layout="row nowrap" xs-layout="row wrap" flex>
+                        <div (click)="openViewEditPackDialog(task)" class="c-flight-card__flight-schedule container-fluid" flex="auto" xs-order="1">
+                            <div class="row">
+                                <div class="row col-md-7">
+                                    <div class="
                       c-card__image-holder
                       col-md-2 col-sm-2 col-xs-2 col-2
                       image-container
-                    "
-                  >
-                    <img
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAACXCAMAAAAvQTlLAAAAjVBMVEX////8ugD8uAD8tgD8tAD///3/+/L8sgD//vn//PX+9d7+6b3+7sX//PD/+On+6br8xEP+7sn8vRn92H7+5Kv925H8vyf+57P/+OX93pr9zGb+4qL91oL+8tj+8c/8yFL9yV7903X8wzj91pL9zW/8zVv8vTX8ykv8uSr902z93Iv9zXf93KD80WP90YN6C8acAAAJn0lEQVR4nO1ca3eqOhOWhCAiIETud1Ivu7Q9///nHZKAYtWaIHS/6z0+X7r2WgJP5pbJzGQvFi+88MILL7zwwgsvvPB/D4RWmmbbtqWtEPrbZDis3PWa7CMpnQBjUlYfWZO6ufU3Kel2vi0DDACA4AzY/gOTfWxYf0VyqPATvFQBUG4BQFUl29D+bVK5T6icbnI6cQMg2Lva77FahQlQwfnzsBWOuqRQVUjVOBAbPKa/JDQ7Jq099d8FOHCqukk3LkWYNnXVOsDpB5Q2bn6BmeUH6omUirexa3z3PcsoUp+0ouu5wcCfmZkek+5rrRhKP9fuupxmxwnuNdoaWriakda65LJqJRXEhf7o54ZX9QoF8FjMxcredusHSrkWczPdyIKeGc4eLmQUXAw7pSSuRMSM/I4ZUPcziAxtlU6Fjiu5bqvpmYH11FuAkXDLgqMM2O4XBbbTEsuDTljbaNwLCsKNANZT7ugbzIXlhKNfYfncaWBpTEYr7F65fyo6rrnIVGcqYimjBWD8pJ/bFSMGyTTEQuZMAKdPv0nbqtwcpiDmcWnhSWJPw14GyUjvGcDltAJzAlYtUhZuYPXsblkwTwQTLLCDxyKZ+v5cHLMcrkR3IlYLKjFmY09Zq16pjNZ0IadFzIPOM4aRQrZ5jI+mt4Bq9lYyPvCbLEI8J/JbYHFMTcaamF4yWqOfvwuD7baj1dAweZczHLRY8AF4nJPnzKPBRIHrEhlkucWoZx32bDwxIw69ZLrYjHh0zaTlzFQAcdnbR5iuRqgJzKNFii3zSXnT95gW32dgxGHQDQ6Uso/p1JWBMmmgv8QnHBMrNix0ZbMw4rCYoSRyueZqTx8KJssiboFtclAurcvB+PgiiojGR/gl9cw7U/6M1kXh049I5SpWMEL30sgxXbwn8QSPqWOisQzQHsqtHmVUXGT2Kp+n0tAt/hmbqhFuZ2TEoVHLV8XTu5xmz+qEOf0d6DtICwPCv8+ofPH4vEtf2UaeF1663W7rffnV/vG9TZ7nhq3p+mCv9uSiJM1TQT06TXWThGCo8qJ5D7X9N8BOtav9jVt0NlVQj1REQytLc1v/1QzuKrrcIVQr4anjAAbMBm0aBQdO7Rn8GAh9wRcX9I3tuX+Nk5CmX24VykSy9aCtsHt7i1u8vb39k+wJBrT10FFUl+vFIqEGlglqxuNRAtW0Av9VWBUE2DdE1boi55ZCYNhGi8iyrVWL1rYiM212e+eAecEjVsVzT0TPG7BaIDNTlu3iSqYPnAmmiJ56FhemvT+MA0KcpErqzA/XRWvlyIqKlFlVvqTZlJjh6zvQpzhovTvAvgoNHU/ARbuKZ8/sAkyB8E+w992c/1qjJ9Sl2BaplcNoZ6REhd1HVMd/uLQEnkjRbhYnqXL05g+XfQKt0axVMJu26W+XZ+fVzXfc9wZU8F78KLR4QCu29BUDamEbxSaN/fpIbQus+3cnlFcjxCuiTr4cfh0VNWDfC2JnCffhfWamMjD6zzD2GbwW4WZd5DZaoJWVeydTRf9A4VOEzXbTy28jI6PMQGWYiaLi+I53FsqFccHv0Qv/OZB9NlRb52MiMJiPXMnE3bZ2BpXMyH28VGrzBrNiYPOsWUr5nCM+Y9f+HWZcPlutEK8NlVdwQ1duRd+L/UhLj0A9XnmniQe08FcWf3qhF5oUXhh6n369J4c/l4lgSmOlIxS27/JaoNChzALfWhSxowYXfqTHw3Y38HSkG3lLaRO2WJumG0X6yrKMy91Qlld5+6e6T2CrItIy04t4yCvfX3bh98fDAePeyljeEBzI8fgtVoXT8Gq9tW6Nj8qsGBiY7n4oULnAeZse2v5VGWajTKBHDrdVJt2Yyti0tdVKs9dxOeiznyM9ZP53/Nq/Z1m9/yoJ+XOVm05iXx10L4BcQQAHQUBF8p0UhKRsPjfFwx1ZghfbS3/OVo26b3SCq+EO6rLEN22xpC0Vr57YlBd8sNJ1eaW53q7KOBf6DkMjHr8iqpXlo9RhFX+3dC6/L1Mqu/Ul9iG6mSwfrzmqv6sQBpmEqCgQOxGJnQhZAUjkVKebwYUywTaSPauw5FYVKwXwvFBoDcgjA2UC0UT9DI2uS0A37GO0CiC4xy+ibOCQsJattFAfU4DgATKVqk7k2dkBoCNpX7S5JtwpYjXsQLguhYoE9nYGg/XjBwagLSywE5QyLxXL1KXMWjmdAWqJMhA/1zaiZil1CmbQ80TpzwBEfEX8ZC9cZ2PSla2b5P3AGliWt5LZW2AnaPFKpsvqTJImvECR1w34QaUSKlKxDilwhL/A63IjivfIzRQmNKCW3mPv53U5cYNBOzC60dueg3l6Cg7JoxnRUFYvIVuznMsPqPksT6RjkUla3C+4INpPBqXEPh9xRY6uzFlFFjBq7aHzkOyatD18XMsux8zvZb7yRVfyVF8BGX5C8x4+drtc3ghSrE+NpdyroJqXC2HXWOVepSzZ+C8or2mxmomEN7JXlhP1rbSiqVqVljd8iJVYoKQRe9NNTqwMb3dDWbzP50hGby2QC8XyYF0rIL3ymFmYWGVqDJjL/3gcvA2NTzLNNjzMhnQkejAneDMNwXDwiRMypqfCpnPGrEgAtjN+RzHZksTzVhmwkCrRsbpAxtZ0K/Q8iw3zxZFzQzzdmcMnI9YSGb+d8FlMKJPpi8Bih064H+1SKOPynjZYdG9VZPPhAfTq6VdcAW350OJTXX2Dj686Ew6exOwIoD45YsPnaqcYHO7g85OJdMXgO/h49GRT81xa8Pj8DETczW1PQaw1eUZrCrtAMT95HcYeQ87QOC0QTONHncRg+qRNGLxYBqfa2lDcVZ+fuzMSHuCoWtQPSLt7J2S8LqMtXxw8TjnsZvI6EoAjL+Yhk3Qv+Jh2Gikvu/s/ZDPCyowEdH2I8WflO7CSzsigWK1mALvp+uNQmWEcVg+7tidQEpkbalZD+hXtp9xnz8jr/vYjrARvGutF1tcRIZ5n1LoFSs+3RUljPCrE6LZXniYcwH7OoVP7VBQHcOn47v1vWUb6Dvrb3QA6sw1acyAj6UVAe6MkaQpNu7Q2tNLstHYC0Jf16e3aX7jFndf4dHkb0PEzkvhN6m1arMPU9z8IWJ7vItPpGW/mgdMOKGrIsB3K54E60YDhvXI6ynH8zRvv2ibD6p3O6JmUCiqZHukkQLb5Reh995vk2NBLGT902XmguWlWKnS+8WLIS10CsmvWM09X/wyk2VHYvFel4wRBQBynSrZpHln6/8j/2rHQrShq6fyO573wwgsvvPDCCy+88F/Bv+dmh0vcmfKIAAAAAElFTkSuQmCC"
-                      alt=""
-                      class="c-card__image img-responsive"
-                      flex="nogrow"
-                    />
-                  </div>
-                  <div
-                    class="
+                    ">
+                                        <img src="data:image/png;base64,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"
+                                            alt="" class="c-card__image img-responsive" flex="nogrow" />
+                                    </div>
+                                    <div class="
                       col-md-10 col-sm-10 col-xs-10 col-10
                       align-self-center
-                    "
-                  >
-                    <strong> PackName: Large Name this </strong>
-                    <div class="description-info">
-                      Large Item Description DescriptionDescription Large Item
-                      Description DescriptionDescription
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="c-flight-card__duration col-md-12 row">
-                    <!-- <strong > -->
-                    <!-- <div class="col-md-6 row"> -->
-                    <div class="col-4 checkbox-container">
-                      <label class="align-self-center"> Brandless</label>
-                      <input
-                        class="align-self-center"
-                        type="checkbox"
-                        (change)="toggleBrandless($event, i)"
-                        formControlName="isBrandless"
-                      />
-                    </div>
-                    <div class="col-4">
-                      <mat-form-field class="language-field">
-                        <mat-select
-                          (ngModelChange)="changeBrand($event, i)"
-                          formControlName="brand"
-                          placeholder="Brand"
-                        >
-                          <mat-option
-                            *ngFor="
+                    ">
+                                        <strong> PackName: Large Name this </strong>
+                                        <div class="description-info">
+                                            Large Item Description DescriptionDescription Large Item Description DescriptionDescription
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="c-flight-card__duration col-md-12 row">
+                                        <!-- <strong > -->
+                                        <!-- <div class="col-md-6 row"> -->
+                                        <div class="col-4 checkbox-container">
+                                            <label class="align-self-center"> Brandless</label>
+                                            <input class="align-self-center" type="checkbox" (change)="toggleBrandless($event, i)" formControlName="isBrandless" />
+                                        </div>
+                                        <div class="col-4">
+                                            <mat-form-field class="language-field">
+                                                <mat-select (ngModelChange)="changeBrand($event, i)" formControlName="brand" placeholder="Brand">
+                                                    <mat-option *ngFor="
                               let brand of (form.controls.items?.value)[i]
                                 .brandsList
-                            "
-                            [value]="brand"
-                          >
-                            {{ brand.value }}
-                          </mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                    </div>
-                    <!-- </div> -->
-                    <div class="col-4">
-                      <mat-form-field>
-                        <mat-select
-                          (ngModelChange)="changeVariant($event, i)"
-                          formControlName="variant"
-                          placeholder="Variant"
-                        >
-                          <mat-option
-                            *ngFor="
+                            " [value]="brand">
+                                                        {{ brand.value }}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <!-- </div> -->
+                                        <div class="col-4">
+                                            <mat-form-field>
+                                                <mat-select (ngModelChange)="changeVariant($event, i)" formControlName="variant" placeholder="Variant">
+                                                    <mat-option *ngFor="
                               let variant of (form.controls.items?.value)[i]
                                 .brand?.variantsList
-                            "
-                            [value]="variant"
-                          >
-                            {{ variant.value }}
-                          </mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                    </div>
-                    <!-- </div> -->
+                            " [value]="variant">
+                                                        {{ variant.value }}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <!-- </div> -->
 
-                    <!-- </strong> -->
-                    <!-- <sub class="row"> -->
-                    <div class="col-4">
-                      <input formControlName="pricePerItem" />
-                    </div>
-                    <div class="col-4">
-                      <mat-form-field>
-                        <mat-select
-                          (ngModelChange)="changeQuantity($event, i)"
-                          formControlName="quantity"
-                          placeholder="Quantity"
-                        >
-                          <mat-option
-                            *ngFor="
+                                        <!-- </strong> -->
+                                        <!-- <sub class="row"> -->
+                                        <div class="col-4">
+                                            <input formControlName="pricePerItem" />
+                                        </div>
+                                        <div class="col-4">
+                                            <mat-form-field>
+                                                <mat-select (ngModelChange)="changeQuantity($event, i)" formControlName="quantity" placeholder="Quantity">
+                                                    <mat-option *ngFor="
                               let quantity of (form.controls.items?.value)[i]
                                 .quantityList
-                            "
-                            [value]="quantity"
-                          >
-                            {{ quantity.value }}
-                          </mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                    </div>
+                            " [value]="quantity">
+                                                        {{ quantity.value }}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
 
-                    <div class="col-4">
-                      <input formControlName="totalPricePerItem" />
-                    </div>
+                                        <div class="col-4">
+                                            <input formControlName="totalPricePerItem" />
+                                        </div>
 
-                    <!-- </sub> -->
-                  </div>
-                  <!-- <div class="c-flight-card__stops" xs-order="1">
+                                        <!-- </sub> -->
+                                    </div>
+                                    <!-- <div class="c-flight-card__stops" xs-order="1">
                                     <strong>                         </strong>
                                 </div> -->
-                </div>
-                <div class="col-md-1 col-12 row align-center">
-                  <!-- <strong class=" col-12"> -->
-                  <mat-icon class="col-4">mic</mat-icon>
-                  <mat-icon class="col-4">edit</mat-icon>
-                  <mat-icon class="col-4">delete</mat-icon>
-                  <!-- </strong> -->
-                  <!-- <sub></sub> -->
-                </div>
-              </div>
+                                </div>
+                                <div class="col-md-1 col-12 row align-center">
+                                    <!-- <strong class=" col-12"> -->
+                                    <mat-icon class="col-4">mic</mat-icon>
+                                    <mat-icon class="col-4">edit</mat-icon>
+                                    <mat-icon class="col-4">delete</mat-icon>
+                                    <!-- </strong> -->
+                                    <!-- <sub></sub> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
-          </div>
-        </article>
-      </div>
+        </div>
     </div>
-  </div>
-  <div class="footer-container">
-    <div class="bottom-navigation">Pack Summary:</div>
-    <div class="main-footer">
-      <button mat-raised-button color="primary" class="uppercase mx-2">
-        Cancel
-      </button>
-      <a mat-raised-button color="accent" class="uppercase mx-2">Continue</a>
-    </div>
-  </div>
+
 </form>
