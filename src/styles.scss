@@ -17,7 +17,8 @@
 .layout-container {
     margin: 0;
     height: 100%;
-    top: 20px;
+    border: 2px solid blue;
+    // top: 20px;
 }
 
 .layout-inner-container {
@@ -68,9 +69,9 @@
 .layout-inner-container .tool-bar-row .search-row .search-container input {
     border: 0;
     border-radius: 50px;
-    padding: 0 15px 0 35px;
+    // padding: 0 15px 0 35px;
     width: 100%;
-    height: 40px;
+    height: 2rem;
     font-size: 16px;
     font-weight: 500;
     background: none;
@@ -78,21 +79,21 @@
 
 .layout-inner-container .content-layout-container {
     display: flex;
+    height: 70vh;
 }
 
 .layout-inner-container .content-layout-container .left-layout-container {
     width: 30%;
     overflow: scroll;
-    height: 84vh;
+    height: 70vh;
     position: relative;
 }
 
 .layout-inner-container .content-layout-container .left-layout-container .left-nav-list {
-    min-height: 70vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 92%;
 }
 
 .layout-inner-container .content-layout-container .left-layout-container .left-nav-list a {
@@ -117,16 +118,17 @@
 .layout-inner-container .content-layout-container .left-layout-container .left-nav-list .left-layout-nav-item span {
     display: block;
     padding: 0 5px;
-    border-left: 2px solid #00b9f5;
+    border-left: 1px solid #00b9f5;
 }
 
 .layout-inner-container .content-layout-container .right-layout-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 2px 2px 2px;
+    padding: 0px 0px 0px 0px;
     overflow: scroll;
     position: absolute;
     right: -2px;
     width: 70%;
-    max-height: 80vh;
+    height: 76%;
+    border: 2px solid pink;
 }
