@@ -41,7 +41,6 @@ a:active {
 }
 
 .layout-inner-container .tool-bar-row {
-    border-bottom: 1px solid #e8edf3;
     width: 100%;
     position: relative;
 }
@@ -75,7 +74,6 @@ a:active {
 .layout-inner-container .tool-bar-row .search-row .search-container input {
     border: 0;
     border-radius: 50px;
-    // padding: 0 15px 0 35px;
     width: 100%;
     height: 2rem;
     font-size: 16px;
@@ -85,13 +83,14 @@ a:active {
 
 .layout-inner-container .content-layout-container {
     display: flex;
-    height: 70vh;
+    height: 74vh;
+    background: blue;
 }
 
 .layout-inner-container .content-layout-container .left-layout-container {
     width: 30%;
     overflow: scroll;
-    height: 72vh;
+    height: 100%;
     position: relative;
 }
 
@@ -100,7 +99,7 @@ a:active {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 85%;
+    height: 100%;
 }
 
 .layout-inner-container .content-layout-container .left-layout-container .left-nav-list a {
@@ -125,7 +124,7 @@ a:active {
 .layout-inner-container .content-layout-container .left-layout-container .left-nav-list .left-layout-nav-item span {
     display: block;
     padding: 0 5px;
-    border-left: 1px solid #00b9f5;
+    border-left: 2px solid #00b9f5;
 }
 
 .layout-inner-container .content-layout-container .right-layout-container {
@@ -133,8 +132,7 @@ a:active {
     flex-wrap: wrap;
     padding: 0px 0px 0px 0px;
     overflow: scroll;
-    position: absolute;
     right: -2px;
     width: 70%;
-    height: 77%;
+    height: 100%;
 }

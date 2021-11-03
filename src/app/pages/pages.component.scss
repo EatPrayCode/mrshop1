@@ -1,4 +1,9 @@
 @import "../theme/styles/variables";
+.main-content {
+    max-height: 80vh;
+    height: 80vh;
+}
+
 .sidenav {
     position: fixed;
     z-index: 999999;
@@ -158,14 +163,16 @@
 
 .navbar {
     width: 100%;
-    background-color: red;
+    background-color: green;
+    z-index: 0;
+    color: black;
     overflow: auto;
 }
 
 .navbar a {
     float: left;
     padding: 2px;
-    color: white;
+    // color: white;
     text-decoration: none;
     font-size: 14px;
 }
