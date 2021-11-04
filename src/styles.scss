@@ -83,7 +83,7 @@ a:active {
 
 .layout-inner-container .content-layout-container {
     display: flex;
-    height: 71vh;
+    height: 60vh;
     border: 2px solid purple;
 }
 
@@ -139,7 +139,7 @@ a:active {
 
 @media screen and (min-width: 600px) and (max-width: 959px) {
     .layout-inner-container .content-layout-container {
-        height: 65vh;
+        height: 60vh;
         border: 2px solid purple;
     }
 }
