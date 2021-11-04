@@ -32,7 +32,7 @@ export class AppComponent {
         }); 
       }            
     });
-    document.getElementById('preloader').classList.add('hide');
+    // document.getElementById('preloader').classList.add('hide');
   }
 
 }

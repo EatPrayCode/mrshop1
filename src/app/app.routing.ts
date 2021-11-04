@@ -9,7 +9,7 @@ import { BlankComponent } from './layouts/blank/blank.component';
 export const routes: Routes = [
     {
         path: '',
-        component: BlankComponent,
+        component: PagesComponent,
         // component: KitchensinkComponent,
         children: [
             { path: '', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
