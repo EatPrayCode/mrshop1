@@ -1,6 +1,6 @@
 [{
         "id": 1,
-        "title": " Very very very very Centrally located office",
+        "title": " Very very very very Centrally",
         "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Office",
         "propertyStatus": ["For Rent", "No Fees"],
@@ -12,7 +12,7 @@
             "lat": 33.954220,
             "lng": -118.293730
         },
-        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 90044 90044 90044 90044",
+        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 ",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
         "featured": true,
         "priceDollar": {
@@ -135,7 +135,7 @@
     },
     {
         "id": 1,
-        "title": " Very very very very Centrally located office",
+        "title": " Very very very very Centrally",
         "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Office",
         "propertyStatus": ["For Rent", "No Fees"],
@@ -147,7 +147,7 @@
             "lat": 33.954220,
             "lng": -118.293730
         },
-        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 90044 90044 90044 90044",
+        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 ",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
         "featured": true,
         "priceDollar": {
@@ -270,7 +270,7 @@
     },
     {
         "id": 1,
-        "title": " Very very very very Centrally located office",
+        "title": " Very very very very Centrally",
         "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Office",
         "propertyStatus": ["For Rent", "No Fees"],
@@ -282,7 +282,7 @@
             "lat": 33.954220,
             "lng": -118.293730
         },
-        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 90044 90044 90044 90044",
+        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 ",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
         "featured": true,
         "priceDollar": {
@@ -405,7 +405,7 @@
     },
     {
         "id": 1,
-        "title": " Very very very very Centrally located office",
+        "title": " Very very very very Centrally",
         "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Office",
         "propertyStatus": ["For Rent", "No Fees"],
@@ -417,7 +417,7 @@
             "lat": 33.954220,
             "lng": -118.293730
         },
-        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 90044 90044 90044 90044",
+        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 ",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
         "featured": true,
         "priceDollar": {
@@ -540,7 +540,7 @@
     },
     {
         "id": 1,
-        "title": " Very very very very Centrally located office",
+        "title": " Very very very very Centrally",
         "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Office",
         "propertyStatus": ["For Rent", "No Fees"],
@@ -552,7 +552,7 @@
             "lat": 33.954220,
             "lng": -118.293730
         },
-        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 90044 90044 90044 90044",
+        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 ",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
         "featured": true,
         "priceDollar": {
@@ -675,7 +675,7 @@
     },
     {
         "id": 1,
-        "title": " Very very very very Centrally located office",
+        "title": " Very very very very Centrally",
         "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Office",
         "propertyStatus": ["For Rent", "No Fees"],
@@ -687,7 +687,7 @@
             "lat": 33.954220,
             "lng": -118.293730
         },
-        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 90044 90044 90044 90044",
+        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 ",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
         "featured": true,
         "priceDollar": {
@@ -810,7 +810,7 @@
     },
     {
         "id": 1,
-        "title": " Very very very very Centrally located office",
+        "title": " Very very very very Centrally",
         "desc": "Lorem ipsum dolor sit amet consectetur.",
         "propertyType": "Office",
         "propertyStatus": ["For Rent", "No Fees"],
@@ -822,7 +822,7 @@
             "lat": 33.954220,
             "lng": -118.293730
         },
-        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 90044 90044 90044 90044",
+        "formattedAddress": "1052 91st St, Los Angeles,  very very 90044 ",
         "features": ["Air Conditioning", "Barbeque", "Dryer", "Microwave", "Refrigerator", "Fireplace", "Sauna", "TV Cable", "WiFi"],
         "featured": true,
         "priceDollar": {
