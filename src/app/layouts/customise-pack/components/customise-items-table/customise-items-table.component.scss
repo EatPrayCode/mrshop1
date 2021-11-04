@@ -315,7 +315,6 @@ $screen-md-max: ($screen-lg-min - 1);
         @media screen and (min-width: $screen-sm-min) {
             padding: 5px;
             text-align: center;
-            width: 140px;
         }
     }
     .c-flight-card__stops {
@@ -323,7 +322,6 @@ $screen-md-max: ($screen-lg-min - 1);
         @media screen and (min-width: $screen-sm-min) {
             padding: 5px;
             text-align: center;
-            width: 160px;
         }
     }
     .c-flight-card__price {
